@@ -57,13 +57,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Airbnb heeft goede headings met duidelijke benamingen. Het is makkelijk om hierdoor te navigeren.
-  <img src="readme-images/home-headings.png" width="375px" alt="home headings">
+  <img src="readme-images/home-headings.png" width="500px" alt="home headings">
   Ook de links zijn duidelijk aangegeven. De namen zijn logisch en geven goed aan waar je als gebruiker naartoe navigeert op het moment dat je erop klikt.
-  <img src="readme-images/home-links.png" width="375px" alt="home hyperlinks">
+  <img src="readme-images/home-links.png" width="500px" alt="home hyperlinks">
   De kopjes op een advertentie pagina zijn minder duidelijk. Als ik voor het eerst op de site zou komen, zou ik bijvoorbeeld niet direct weten wat "December 2025" betekent.
-  <img src="readme-images/ad-headings.png" width="375px" alt="advertentie headings">
+  <img src="readme-images/ad-headings.png" width="500px" alt="advertentie headings">
   De hyperlinks zijn logisch, zolang je eerst de context van de kopjes hebt. Als je alleen snel door de links zou willen navigeren, zou ik niet weten waar ik naartoe zou navigeren.
-  <img src="readme-images/ad-links.png" width="375px" alt="advertentie hyperlinks">
+  <img src="readme-images/ad-links.png" width="500px" alt="advertentie hyperlinks">
 
 </details>
 
