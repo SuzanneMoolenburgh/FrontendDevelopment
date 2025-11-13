@@ -56,14 +56,18 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 2<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Airbnb heeft goede headings met duidelijke benamingen. Het is makkelijk om hierdoor te navigeren.
+  Airbnb heeft goede headings met duidelijke benamingen. Het is makkelijk om hierdoor te navigeren. Ondanks dat ze geen zichtbare h1 op de startpagina hebben, hebben ze deze wel verborgen. De screenreader leest 'Startpagina van Airbnb' voor.
   <img src="readme-images/home-headings.png" width="850px" alt="home headings">
-  Ook de links zijn duidelijk aangegeven. De namen zijn logisch en geven goed aan waar je als gebruiker naartoe navigeert op het moment dat je erop klikt.
+  Ook de links zijn duidelijk aangegeven. De namen zijn logisch en geven goed aan waar je als gebruiker naartoe navigeert op het moment dat je erop klikt. Er is ook een 'skip links' aanwezig, zodat gebruikers met een screenreader gelijk naar de inhoud kunnnen navigeren.
   <img src="readme-images/home-links.png" width="850px" alt="home hyperlinks">
-  De kopjes op een advertentie pagina zijn minder duidelijk. Als ik voor het eerst op de site zou komen, zou ik bijvoorbeeld niet direct weten wat "December 2025" betekent.
+  De kopjes op een advertentie pagina zijn minder duidelijk. Als ik voor het eerst op de site zou komen, zou ik bijvoorbeeld zonder visuele context niet direct weten wat "December 2025" betekent.
   <img src="readme-images/ad-headings.png" width="850px" alt="advertentie headings">
   De hyperlinks zijn logisch, zolang je eerst de context van de kopjes hebt. Als je alleen snel door de links zou willen navigeren, zou je waarschijnlijk niet direct weten waar je naartoe zou moeten navigeren.
   <img src="readme-images/ad-links.png" width="850px" alt="advertentie hyperlinks">
+  Uit de test bleek dat Airbnb op veel vlakken goed heeft nagedacht over toegankelijkheid. Los van de headings hebben ze bijvoorbeeld ook een goede toetsenbordnavigatie, zijn afbeeldingen en kaarten voorzien van alternatieve tekst en is er een goed kleurcontrast. Ook reageert de site op bijvoorbeeld de hoge-contrast modus en tekstvergroting.
+  <img src="readme-images/contrast-home.png" width="850px" alt="startpagina met hoog contrast">
+  Airbnb heeft nog wel kleine verbeterpunten. Zo gebruiken ze bijvoorbeeld veel carrousels en lijsten, maar hiervoor worden div's gebruikt, in plaats van lijst elementen. Ook hebben pagina's geen eigen titel en maakt alleen de startpagina gebruikt van een verborgen h1. Airbnb ondersteunt ook geen dark mode.
+  <img src="readme-images/geen-ul.png" width="850px" alt="list item aangeduidt met een div">
 
 </details>
 
