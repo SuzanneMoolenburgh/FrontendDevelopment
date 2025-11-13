@@ -62,7 +62,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <img src="readme-images/home-links.png" width="850px" alt="home hyperlinks">
   De kopjes op een advertentie pagina zijn minder duidelijk. Als ik voor het eerst op de site zou komen, zou ik bijvoorbeeld niet direct weten wat "December 2025" betekent.
   <img src="readme-images/ad-headings.png" width="850px" alt="advertentie headings">
-  De hyperlinks zijn logisch, zolang je eerst de context van de kopjes hebt. Als je alleen snel door de links zou willen navigeren, zou ik niet weten waar ik naartoe zou navigeren.
+  De hyperlinks zijn logisch, zolang je eerst de context van de kopjes hebt. Als je alleen snel door de links zou willen navigeren, zou je waarschijnlijk niet direct weten waar je naartoe zou moeten navigeren.
   <img src="readme-images/ad-links.png" width="850px" alt="advertentie hyperlinks">
 
 </details>
