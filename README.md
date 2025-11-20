@@ -101,7 +101,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Ook ben ik begonnen met het caroussel voor de advertenties. Dit gaat tot nu toe ook goed.
   <img src="readme-images/voortgang1-b.png" width="500px" alt="screenshot van een advertentie caroussel">
   Ik heb me tijdens de eerste twee weken wel gerealizeerd dat de website die ik heb gekozen moeilijk is dan ik van tevoren had verwacht. De lastigste onderdelen op dit moment waar ik ook nog niet uit ben gekomen zijn de footer en de responsive form zoekbalk.
-  <img src="readme-images/voortgang-c.png" width="600px" alt="screenshots van grootste uitdagingen">
+  <img src="readme-images/voortgang1-c.png" width="600px" alt="screenshots van grootste uitdagingen">
 
 
   ### Agenda voor meeting
