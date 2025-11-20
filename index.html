@@ -9,14 +9,252 @@
 	<title>Airbnb | Vakantiewoningen, houten huisjes, strandhuizen en meer</title>
 
 	<link href="styles/style.css" rel="stylesheet">
+	<link href="styles/home.css" rel="stylesheet">
+
+	<script defer src="scripts/script.js"></script>
 
 	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 
 <body>
-	<h1>Airbnb</h1>
+	<header>
+		<picture>
+			<source srcset="images/logo-groot.png" media="(width >= 950px)">
+			<img src="images/logo-klein.png" alt="Airbnb Logo" height="35">
+		</picture>
+		<nav>
+			<ul>
+				<li>
+					<a href="#">
+						<lottie-player src="animations/House.json" background="transparent" speed="1" autoplay></lottie-player>
+						Homes
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<lottie-player src="animations/Air Balloon.json" background="transparent" speed="1" autoplay></lottie-player>
+						Experiences
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<lottie-player src="animations/Hotel Bell.json" background="transparent" speed="1" autoplay></lottie-player>
+						Services
+					</a>
+				</li>
+			</ul>
+		</nav>
+    	<button>
+      		<img src="images/icons/language.svg" alt="Taal icoon">
+    	</button>
+    	<button>
+      		<img src="images/icons/menu.svg" alt="Menu icoon">
+    	</button>
+		<button>
+			<img src="images/icons/search.svg" alt="Zoek icoon">
+			Begin je zoektocht
+		</button>
 
-	<script defer src="scripts/script.js"></script>
+		<!-- form > input / popover (article?) -->
+
+	</header>
+
+	<main>
+		<h1>Startpagina van Airbnb</h1>
+		<section>
+			<a href="#">
+				<h2>Populaire woningen in Parijs</h2>
+				<img src="images/icons/arrow.svg" alt="Link icoon">
+			</a>
+		</section>
+		<section>
+			<a href="advertentie.html">
+				<article>
+					<h3>Kamer in Parijs</h3>
+					<img src="images/parijs1.png" alt="Foto van een woonkamer van een kamer in Parijs">
+					<time datetime="2026-07-17" aria-label="17 tot 19 juli 2026">17 - 19 jul</time>
+					<p>Particuliere host</p>
+					<p>€198 voor 2 nachten</p>
+					<data value="4.93" aria-label="Gemiddelde beoordeling: 4,93 van 5">
+    					<img src="images/icons/star.svg" alt="Ster">
+    					4,93
+  					</data>
+				</article>
+			</a>
+			<a href="#">
+				<article>
+					<h3>Appartement in Ivry-sur-Seine</h3>
+					<img src="images/parijs2.png" alt="Foto van het eetgedeelte van een appartement in Ivry-sur-Seine">
+					<time datetime="2026-04-24" aria-label="24 tot 26 aprill 2026">24 - 26 apr</time>
+					<p>Particuliere host</p>
+					<p>€169 voor 2 nachten</p>
+					<data value="4.93" aria-label="Gemiddelde beoordeling: 5,0 van 5">
+    					<img src="images/icons/star.svg" alt="Ster">
+    					4,93
+  					</data>
+				</article>
+			</a>
+			<a href="#">
+				<article>
+					<h3>Kamer in Asnières-sur-Seine</h3>
+					<img src="images/parijs3.png" alt="Foto van een slaapkamer van een kamer in Asnières-sur-Seine">
+					<time datetime="2026-04-03" aria-label="3 tot 5 aprill 2026">3 - 5 apr</time>
+					<p>Particuliere host</p>
+					<p>€123 voor 2 nachten</p>
+					<data value="4.92" aria-label="Gemiddelde beoordeling: 4,92 van 5">
+    					<img src="images/icons/star.svg" alt="Ster">
+    					4,92
+  					</data>
+				</article>
+			</a>
+			<a href="#">
+				<article>
+					<h3>Hotel in Parijs</h3>
+					<img src="images/parijs4.png" alt="Foto van een hotel in Parijs">
+					<time datetime="2026-01-16" aria-label="16 tot 18 januari 2026">16 - 18 jan</time>
+					<p>Zakelijke host</p>
+					<p>€147 voor 2 nachten</p>
+					<data value="4,95" aria-label="Gemiddelde beoordeling: 4,95 van 5">
+    					<img src="images/icons/star.svg" alt="Ster">
+    					4,95
+  					</data>
+				</article>
+			</a>
+			<a href="#">
+				<article>
+					<h3>Appartement in Gennevilliers</h3>
+					<img src="images/parijs5.png" alt="Foto van de tuin van een huurcomplex in Gennevilliers">
+					<time datetime="2026-09-18" aria-label="18 tot 20 september 2026">18 - 20 sep</time>
+					<p>Particuliere host</p>
+					<p>€110 voor 2 nachten</p>
+					<data value="5,0" aria-label="Gemiddelde beoordeling: 5,0 van 5">
+    					<img src="images/icons/star.svg" alt="Ster">
+    					5,0
+  					</data>
+				</article>
+			</a>
+			<a href="#">
+				<article>
+					<h3>Kamer in Parijs</h3>
+					<img src="images/parijs6.png" alt="Foto van een slaapkamer van een kamer in Parijs">
+					<time datetime="2026-01-02" aria-label="2 tot 4 januari 2026">2 - 4 jan</time>
+					<p>Particuliere host</p>
+					<p>€174 voor 2 nachten</p>
+					<data value="4,94" aria-label="Gemiddelde beoordeling: 4,94 van 5">
+    					<img src="images/icons/star.svg" alt="Ster">
+    					4,94
+  					</data>
+				</article>
+			</a>
+			<a href="#">
+				<article>
+					<h3>Appartement in Ivry-sur-Seine</h3>
+					<img src="images/parijs7.png" alt="Foto van een werkkamer van een appartement in Ivry-sur-Seine">
+					<time datetime="2026-01-30" aria-label="30 januari tot 1 februari 2026">30 jan - 1 feb</time>
+					<p>Particuliere host</p>
+					<p>€142 voor 2 nachten</p>
+					<data value="4,93" aria-label="Gemiddelde beoordeling: 4,93 van 5">
+    					<img src="images/icons/star.svg" alt="Ster">
+    					4,93
+  					</data>
+				</article>
+			</a>
+			<a href="#">
+				<article>
+					<h3>Appartement in Parijs</h3>
+					<img src="images/parijs8.png" alt="Foto van een woonkamer van een huurcomplex in Parijs">
+					<time datetime="2026-08-14" aria-label="14 tot 16 augustus 2026">14 - 16 aug</time>
+					<p>Particuliere host</p>
+					<p>€271 voor 2 nachten</p>
+					<data value="5,0" aria-label="Gemiddelde beoordeling: 5,0 van 5">
+    					<img src="images/icons/star.svg" alt="Ster">
+    					5,0
+  					</data>
+				</article>
+			</a>
+		</section>
+	</main>
+
+	<footer>
+
+		<!-- tabbladen? -->
+
+		<section>
+			<h4>Support</h4>
+				<nav>
+					<ul>
+						<li>
+							<a href="#">
+								Helpcentrum
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Hulp bij een veiligheidsprobleem
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Aircover
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Antidiscriminatie
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Hulp voor mensen met beperking
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Annuleringsmogelijkheden
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Problemen in de buurt melden
+							</a>
+						</li>
+					</ul>
+				</nav>
+		</section>
+
+		<section>
+			<button>
+				<img src="images/icons/language.svg" alt="Taal icoon">
+				Nederlands (NL)
+			</button>
+			<button>
+				<img src="images/icons/euro.svg" alt="Euroteken">
+				EUR
+			</button>
+			<button>
+      		<img src="images/icons/facebook.svg" alt="Facebook">
+    		</button>
+			<button>
+      		<img src="images/icons/twitter.svg" alt="Twitter">
+    		</button>
+			<button>
+      		<img src="images/icons/instagram.svg" alt="Instagram">
+    		</button>
+			<p>© 2025 Airbnb, Inc.</p>
+			<a href="#">
+				Privacy
+			</a>
+			<a href="#">
+				Voorwaarden
+			</a>
+			<a href="#">
+				Bedrijfsgegevens
+			</a>
+		</section>
+
+	</footer>
 </body>
 	
 </html>

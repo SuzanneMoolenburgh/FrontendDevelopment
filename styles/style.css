@@ -1,8 +1,11 @@
 /**************/
 /* CSS REMEDY */
 /**************/
+
 *, *::after, *::before {
-  box-sizing:border-box;  
+  box-sizing:border-box;
+  margin: 0;
+  padding: 0;  
 }
 
 
@@ -13,10 +16,23 @@
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
+
+@font-face { 
+  font-family: Airbnb;
+  src: url(../fonts/AirbnbCerealVF.woff2);
+  font-weight: 500;
+}
+
 :root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+	--color-background: #ffffff;
+  --color-footer: #f7f7f7;
+  --color-text: #222222;
+  --color-accent:#ff385c;
+  --color-icon: #f2f2f2;
+  --color-hover: #ebebeb;
+  --color-contrast: #f8f8f8;
+  --color-shadow: #00000033;
+  --color-paragraphs: #6A6A6A;
 }
 
 
@@ -24,8 +40,145 @@
 
 
 /****************/
-/* JOUW STYLING */
+/*    HEADER    */
 /****************/
 
-/* jouw code */
+body {
+  font-family: Airbnb, sans-serif;
+}
 
+header {
+  background: linear-gradient(180deg,var(--color-background) 0%, var(--color-contrast)100%);
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  align-items: center;
+  gap: 1em;
+  box-shadow: 0 0.06em 0.18em var(--color-shadow);
+  min-height: 10.2em;
+}
+
+header ul {
+  grid-row: 2;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+header li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 4em;
+  height: 6em;
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 0.75em;
+}
+
+header > button:nth-of-type(3) {
+  grid-row: 1;
+  justify-self: center;
+  align-self: end;
+  background-color: var(--color-background);
+  padding: 1.4em;
+  border: 0.125em solid transparent;
+  border-radius: 3em;
+  box-shadow: 0 0 0.63em var(--color-shadow);
+  font-weight: 500;
+  font-size: 0.9em;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  width: 85%;
+  min-width: 10em;
+}
+
+header > button:nth-of-type(3):hover {
+  border: 0.125em solid black;
+}
+
+header > button:nth-of-type(3) img {
+  width: 1em;
+  height: 1em;
+}
+
+header > picture, header > button:nth-of-type(1), header > button:nth-of-type(2) {
+  display: none;
+}
+
+@media (min-width: 744px) {
+    header {
+    grid-template-columns: min-content 1fr repeat(2, min-content);
+    padding: 0 1.5em;
+    gap: 1em;
+    min-height: 11.25em;
+  }
+    header > picture {
+    width: 2.2em;
+    height: 2.2em;
+    grid-column: 1;
+    grid-row: 1;
+    display: block;
+  }
+    header > button:nth-of-type(1) {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+    header > button:nth-of-type(2) {
+    grid-column: 4;
+    grid-row: 1;
+  }
+
+  header > button:nth-of-type(3) {
+    display:none;
+  }
+
+  header > button:nth-of-type(1) img, header > button:nth-of-type(2) img {
+    width: 1.3em;
+    height: 1.3em;
+  }
+
+  header > button:nth-of-type(1), header > button:nth-of-type(2) {
+    background-color: var(--color-icon);
+    border: none;
+    border-radius: 100%;
+    width: 3em;
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header > button:nth-of-type(1):hover, header > button:nth-of-type(2):hover {
+    background-color: var(--color-hover);
+  }
+
+  header nav {
+    grid-column: 1 / 5;
+    grid-row: 1;
+  }
+
+  header ul {
+    justify-content: center;
+    gap: 2em;
+    width: auto;
+  }
+
+  header li a {
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    height: 3.7em; 
+    gap: 0.2em;
+    font-size: 0.9em;
+  }
+
+  lottie-player {
+    transition: transform 0.2s ease;
+  }
+
+  lottie-player:hover {
+    transform: scale(1.1);
+  }
+}

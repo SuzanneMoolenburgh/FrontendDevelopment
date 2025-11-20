@@ -1,0 +1,139 @@
+/*********************/
+/*       MAIN        */
+/*********************/
+
+main {
+    padding: 1.5em;
+}
+
+h1 {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+section > a {
+    text-decoration: none;
+}
+
+main section:nth-of-type(1) > a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+h2 {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+main section:nth-of-type(1) > a img {
+    width: 1em;
+    height: 1em;
+}
+
+main section:nth-of-type(2) {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;   
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    margin-top: 1em;
+}
+
+main section:nth-of-type(2) a {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 45%;
+    scroll-snap-align: start;
+}
+
+section:nth-of-type(2) a article {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto repeat(3, min-content);
+    gap: 0.3em; 
+}
+
+article img:nth-of-type(1) {
+    grid-column: 1 / 3;
+    grid-row-start: 1;
+    width: 100%;
+    aspect-ratio: 10.5 / 10;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1.5em;
+}
+
+article > h3 {
+    grid-column: 1 / 3;
+    grid-row-start: 2;
+    font-size: 0.8em;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+article > time {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    font-size: 0.75em;
+    font-weight: 300;
+    color: var(--color-paragraphs);
+}
+
+article p:nth-of-type(1) {
+    grid-column-start: 2;
+    grid-row-start: 3;
+    font-size: 0.75em;
+    font-weight: 300;
+    color: var(--color-paragraphs);
+}
+
+article p:nth-of-type(2) {
+    grid-column-start: 1;
+    grid-row-start: 4;
+    font-size: 0.75em;
+    font-weight: 300;
+    color: var(--color-paragraphs);
+}
+
+data {
+    grid-column-start: 2;
+    grid-row-start: 4;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.25em;
+    font-size: 0.75em;
+    font-weight: 300;
+    color: var(--color-paragraphs);
+}
+
+data img:nth-of-type(1) {
+    width: 0.625em;
+    height: 0.625em;
+}
+
+@media (min-width: 744px) {
+    main section:nth-of-type(2) a {
+    flex-basis: 23%;
+    }
+}
+
+@media (min-width: 950px) {
+    main section:nth-of-type(2) a {
+    flex-basis: 18%;
+    }
+}
+
+@media (min-width: 1130px) {
+    main section:nth-of-type(2) a {
+    flex-basis: 14%;
+    }
+}
