@@ -99,7 +99,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   In de eerste twee weken ben ik al een eind gekomen. Ik ben vooral bezig geweest met de header, met name het invoegen van animaties en het responsive maken.
   <img src="readme-images/voortgang1-1.png" width="600px" alt="screenshots van een responsive header">
   Ook ben ik begonnen met het caroussel voor de advertenties. Dit gaat tot nu toe ook goed.
-  <img src="readme-images/voortgang1-2.png" width="400px" alt="screenshot van een advertentie caroussel">
+  <img src="readme-images/voortgang1-2.png" width="600px" alt="screenshot van een advertentie caroussel">
   Ik heb me tijdens de eerste twee weken wel gerealizeerd dat de website die ik heb gekozen moeilijk is dan ik van tevoren had verwacht. De lastigste onderdelen op dit moment waar ik ook nog niet uit ben gekomen zijn de footer en de responsive form zoekbalk.
   <img src="readme-images/voortgang-uitdagingen.png" width="600px" alt="screenshots van grootste uitdagingen">
 
@@ -107,12 +107,35 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | Suzanne     | Romaisa          | Irem    | Marissa       | Caspar
-  | Vraag over form met button + input + popover element                  | ---                | ---          | ---              |
-  | Footer tabbladen          | en dit             | en ik dit    | en dan ik dat    |
-  | Aria-labels        | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | Herkleuren SVG iconen met CSS                     | ...                | ...          | ...              |
+  Suzanne:
+  1.	Vraag over form met button + input + popover element
+  2.	Footer tabbladen
+  3.	Aria-labels
+  4.	Herkleuren SVG iconen met CSS
 
+  Romaisa:
+  1.  
+  2.	
+  3.	
+  4.	
+
+  Irem:
+  1.  
+  2.	
+  3.	
+  4.	
+
+  Marissa:
+  1.  
+  2.	
+  3.	
+  4.	
+
+  Caspar:
+  1.  
+  2.	
+  3.	
+  4.	
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
