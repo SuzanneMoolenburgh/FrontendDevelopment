@@ -114,6 +114,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   4.	Herkleuren SVG iconen met CSS
 
   Romaisa:
+  1. Hamburger menu icoon kleiner krijgen en zonder achtergrond
+  2. Welke sections kan ik het beste gebruiken
+  3. Javascript naar css en html beter begrijpen
+  4. Aria labels
+  5. Article
 
   Irem:
 
