@@ -127,12 +127,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Caspar:
 
   ### Verslag van meeting
-  hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  De meeting ging goed, ik heb antwoorden op al mijn vragen gehad dus ik kan nu zeker verder met mijn website. De belangrijkste punten:
+
+  - De juiste html elementen voor het maken van mijn form zoekbalk bij een groter scherm.
+  - Het maken van de tabbladen carousel in mijn footer.
+  - Info warning bij validation voor aria labels
+  - Het gebruiken en aanpassen van de kleur van svg iconen
+
+  Ook heb ik aan vragen van anderen in mijn groepje veel gehad, met name over de scroll knoppen (die mijn website ook heeft) en light/dark mode.
 
 </details>
 
