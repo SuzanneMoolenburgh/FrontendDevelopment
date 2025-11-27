@@ -3,10 +3,16 @@
 /*********************/
 
 main {
+    background: var(--color-background);
     padding: 1.4em 1em;
 }
 
-h1, main section > h2, footer section:last-of-type h4 {
+/*Bron:
+- https://www.a11yproject.com/posts/how-to-hide-content/
+Vanuit post in Teams
+*/
+
+h1, main section > h2, footer section:last-of-type h2 {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
     height: 1px;
@@ -23,7 +29,7 @@ main section {
 main section div a {
     font-size: 1.1em;
     font-weight: 600;
-    color: var(--color-text);
+    color: var(--color-svg);
 }
 
 section a {
@@ -50,7 +56,7 @@ main section div a svg {
     fill: none;
     height: 0.8em;
     width: 0.8em;
-    stroke: var(--color-text);
+    stroke: var(--color-svg);
     stroke-width: 5.33333;
     overflow: visible;
 }
@@ -71,6 +77,10 @@ main section ul {
     scrollbar-width: none;
 }
 
+/*Bron:
+- https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/calc
+*/
+
 main section ul > li {
     list-style: none;
     flex-grow: 0;
@@ -88,6 +98,10 @@ main section ul li a {
     column-gap: 0.1em;
 }
 
+/*Bron:
+- https://www.digitalocean.com/community/tutorials/css-cropping-images-object-fit
+*/
+
 li img:nth-of-type(1) {
     grid-column: 1 / 5;
     grid-row-start: 1;
@@ -103,7 +117,7 @@ li h3 {
     grid-row-start: 2;
     font-size: 0.8em;
     font-weight: 500;
-    color: var(--color-text);
+    color: var(--color-svg);
 }
 
 li time {
@@ -111,7 +125,7 @@ li time {
     grid-row: 3;
     font-size: 0.75em;
     font-weight: 400;
-    color: var(--color-paragraphs);
+    color: var(--color-text);
 }
 
 li p:nth-of-type(1) {
@@ -119,7 +133,7 @@ li p:nth-of-type(1) {
     grid-row: 3;
     font-size: 0.75em;
     font-weight: 400;
-    color: var(--color-paragraphs);
+    color: var(--color-text);
     justify-self: start;
 }
 
@@ -128,7 +142,7 @@ li p:nth-of-type(2) {
     grid-row: 4;
     font-size: 0.75em;
     font-weight: 400;
-    color: var(--color-paragraphs);
+    color: var(--color-text);
 }
 
 data {
@@ -141,14 +155,14 @@ data {
     gap: 0.25em;
     font-size: 0.75em;
     font-weight: 300;
-    color: var(--color-paragraphs);
+    color: var(--color-text);
 }
 
 data svg {
     display: block;
     height: 0.7em;
     width: 0.7em;
-    fill: var(--color-text);
+    fill: var(--color-svg);
 }
 
 li button {
@@ -157,10 +171,31 @@ li button {
     right: 0em;
     margin: 1em;
     z-index: 1;
-    background-color: transparent;
+    background-color: var(--color-transparant);
     border: none;
     width: 1.9em;
     height: 1.9em;
+}
+
+figure {
+    background: var(--color-background);
+    opacity: 90%;
+    padding: 0.5em 0.8em;
+    border-radius: 1em;
+    position: absolute;
+    top: 0em;
+    left: 0em;
+    margin: 1em;
+    z-index: 1;
+    right: 4em;
+    min-width: min-content;
+    max-width: max-content;
+}
+
+figcaption {
+    font-size: 0.7em;
+    font-weight: 600;
+    color: var(--color-selected);
 }
 
 main section button{
@@ -173,12 +208,20 @@ main section button:hover {
 
 li button svg {
     display: block;
-    fill: var(--color-heart);
+    fill: rgba(0, 0, 0, 0.5);
     aspect-ratio: 1;
-    stroke: var(--color-background);
+    stroke: #ffffff;
     stroke-width: 2;
     overflow: visible;
 }
+
+
+
+
+
+/****************/
+/*   MAIN: MQ   */
+/****************/
 
 @media (min-width: 375px) {
     main {
@@ -186,7 +229,7 @@ li button svg {
     }
 }
 
-@media (min-width: 744px) {
+@media (min-width: 46.5em) {
     main section ul li {
         flex-basis: calc((100% - 2.1em) / 4);
     }
@@ -196,7 +239,7 @@ li button svg {
         fill: none;
         height: 0.8em;
         width: 0.8em;
-        stroke: currentcolor;
+        stroke: var(--color-svg);
         stroke-width: 4;
         overflow: visible;
     }
@@ -221,7 +264,7 @@ li button svg {
     }
 }
 
-@media (min-width: 950px) {
+@media (min-width: 59.375em) {
     main section ul li {
         flex-basis: calc((100% - 2.8em) / 5);
     }
@@ -233,7 +276,7 @@ li button svg {
     }
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 93.75em) {
     main {
         padding: 2.1em 5.5em;
     }

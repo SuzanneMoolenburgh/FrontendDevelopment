@@ -149,17 +149,33 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Afgelopen week is het gelukt om mijn eerste pagina zo goed als af te ronden.
+  <img src="readme-images/voortgang2-c.png" width="600px" alt="screenshots van de footer">
+  Ook heb ik de eerste animaties met Javascript gedaan, op mijn site zitten deze vooral in de header.
+  <img src="readme-images/voortgang2-a.png" width="600px" alt="screenshot van animaties in de header">
+  Ik heb mijn site ook een dark mode gegeven. Helaas heeft Airbnb deze zelf nog niet dus ik heb eigen kleurvarianten van het bestaande kleurenpalet gebruikt.
+  <img src="readme-images/voortgang2-b.png" width="600px" alt="screenshots van dark mode op mijn website">
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  Suzanne:
+    1.	Aria labels op data & time elementen
+    2.	Hulp bij scroll footer
+
+  Romaisa:
+  1. Hamburger menu icoon kleiner krijgen en zonder achtergrond
+  2. Welke sections kan ik het beste gebruiken
+  3. Javascript naar css en html beter begrijpen
+  4. Aria labels
+  5. Article
+
+  Irem:
+
+  Marissa:
+
+  Caspar:
 
 
   ### Verslag van meeting

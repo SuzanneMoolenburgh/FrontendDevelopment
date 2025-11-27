@@ -19,6 +19,12 @@
 @font-face { 
   font-family: Airbnb;
   src: url(../fonts/AirbnbCerealVF.woff2);
+  font-weight: 300;
+}
+
+@font-face { 
+  font-family: Airbnb;
+  src: url(../fonts/AirbnbCerealVF.woff2);
   font-weight: 400;
 }
 
@@ -31,22 +37,47 @@
 @font-face { 
   font-family: Airbnb;
   src: url(../fonts/AirbnbCerealVF.woff2);
+  font-weight: 600;
+}
+
+@font-face { 
+  font-family: Airbnb;
+  src: url(../fonts/AirbnbCerealVF.woff2);
   font-weight: 700;
 }
 
 :root {
 	--color-background: #ffffff;
   --color-footer: #f7f7f7;
-  --color-text: #222222;
+  --color-svg: #222222;
   --color-accent:#ff385c;
   --color-icon: #f2f2f2;
   --color-hover: #ebebeb;
   --color-contrast: #f8f8f8;
   --color-shadow: #00000033;
-  --color-paragraphs: #6A6A6A;
+  --color-text: #6a6a6a;
   --color-heart: rgba(0, 0, 0, 0.5);
-  --color-unselected: #6a6a6a;
   --color-selected: #000000;
+  --color-details: #dddddd;
+  --color-transparant: rgba(255, 255, 255, 0);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #121212;
+    --color-footer: #1e1e1e;
+    --color-svg: #e0e0e0;
+    --color-accent: #ff385c;
+    --color-icon: #2a2a2a;
+    --color-hover: #2c2c2c;
+    --color-contrast: #1a1a1a;
+    --color-shadow: #00000099;
+    --color-text: #dcdcdc;
+    --color-heart: rgba(255, 255, 255, 0.5);
+    --color-selected: #ffffff;
+    --color-details: #444444;
+    --color-transparant: rgba(0, 0, 0, 0);
+  }
 }
 
 
@@ -96,7 +127,7 @@ header li a span {
 }
 
 header li:nth-of-type(1) > a span {
-  color: var(--color-text);
+  color: var(--color-svg);
   font-weight: 600;
   border-bottom: 0.3em solid var(--color-selected);
   padding-bottom: 0.2em;
@@ -111,10 +142,10 @@ header.scroll li a lottie-player {
   height: 0em;
 }
 
-header li:nth-of-type(2) > a, header li:nth-of-type(3) > a {
-  color: var(--color-unselected);
+header li:not(:nth-of-type(1)) > a {
+  color: var(--color-text);
   font-weight: 400;
-  border-bottom: 0.3em solid transparent;
+  border-bottom: 0.3em solid var(--color-transparant);
   padding-bottom: 0.2em;
 }
 
@@ -123,6 +154,7 @@ header > button:nth-of-type(4) {
   justify-self: center;
   align-self: end;
   background-color: var(--color-background);
+  color: var(--color-selected);
   padding: 1.4em;
   border: 0.125em solid transparent;
   border-radius: 3em;
@@ -140,14 +172,14 @@ header > button:nth-of-type(4) {
 }
 
 header > button:nth-of-type(4):hover {
-  border: 0.125em solid black;
+  border: 0.125em solid var(--color-selected);
 }
 
 header > button:nth-of-type(4) svg {
   display: block;
   height: 0.9em;
   width: 0.9em;
-  fill: var(--color-text);
+  fill: var(--color-svg);
   align-self: center;
 }
 
@@ -155,7 +187,15 @@ header > picture, header > button:not(:last-of-type), header > form {
   display: none;
 }
 
-@media (min-width: 744px) {
+
+
+
+
+/****************/
+/*  HEADER: MQ  */
+/****************/
+
+@media (min-width: 46.5em) {
   header {
     grid-template-columns: min-content 1fr repeat(3, min-content);
     grid-template-rows: 5em 1fr;
@@ -227,14 +267,19 @@ header > picture, header > button:not(:last-of-type), header > form {
     grid-template-columns: repeat(3, min-content);
   }
 
-  header > form label:nth-of-type(1), header > form label:nth-of-type(2), header > form label:nth-of-type(3) {
+  header > form label {
     grid-row: 1;
     align-self: end;
+    color: var(--color-selected);
   }
 
-  header > form input:nth-of-type(1), header > form input:nth-of-type(2), header > form input:nth-of-type(3) {
+  header > form input {
     grid-row: 2;
     align-self: center;
+    border: none;
+    font-size: 1.2em;
+    color: var(--color-text);
+    background-color: var(--color-background);
   }
 
   header > form label:nth-of-type(1), header > form input:nth-of-type(1) {
@@ -248,18 +293,13 @@ header > picture, header > button:not(:last-of-type), header > form {
   header > form label:nth-of-type(3), header > form input:nth-of-type(3) {
     grid-column: 3;
   }
-
-  header > form input {
-    border: none;
-    font-size: 1.2em;
-  }
   
   header > form > button svg {
     display: block;
     fill: none;
     height: 1.2em;
     width: 1.2em;
-    stroke: var(--color-background);
+    stroke: var(--color-svg);
     stroke-width: 4;
     overflow: visible;
     transition: width 0.2s ease, height 0.2s ease;
@@ -306,14 +346,14 @@ header > picture, header > button:not(:last-of-type), header > form {
 
   header > button:nth-of-type(2) svg, header > button:nth-of-type(3) svg {
     display: block;
-    fill: var(--color-text);
+    fill: var(--color-svg);
     height: 1.2em;
     width: 1.2em;
     overflow: visible;
   }
 
   header > button:nth-of-type(3) svg {
-    stroke: currentcolor;
+    stroke: var(--color-svg);
     stroke-width: 3;
   }
 
@@ -326,10 +366,6 @@ header > picture, header > button:not(:last-of-type), header > form {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  header > button:not(:last-of-type):hover {
-    background-color: var(--color-hover);
   }
 
   header nav {
@@ -362,11 +398,12 @@ header > picture, header > button:not(:last-of-type), header > form {
   }
 }
 
-@media (min-width: 1127px) {
+@media (min-width: 70.4375em) {
   header > button:nth-of-type(1) {
     grid-column: 3;
     grid-row: 1;
-    background-color: transparent;
+    background-color: var(--color-transparant);
+    color: var(--color-selected);
     border: none;
     border-radius: 2em;
     font-size: 0.9em;
@@ -387,9 +424,420 @@ header > picture, header > button:not(:last-of-type), header > form {
 /*    FOOTER    */
 /****************/
 
-footer > section:nth-of-type(2) > button > svg {
+footer {
+  background-color: var(--color-footer);
+  padding-bottom: 5em;
+}
+
+footer > section:nth-of-type(1) {
+  padding: 3em 1em;
+  display: grid;
+  grid-template-rows: min-content repeat(2, auto);
+  gap: 1em;
+  position: relative;
+}
+
+footer > section:nth-of-type(1) h2 {
+  font-size: 1.3em;
+  font-weight: 500;
+  color: var(--color-svg);
+  grid-row: 1;
+}
+
+footer > section:nth-of-type(1) div {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+footer > section:nth-of-type(1) nav {
+  grid-row: 2;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  margin-top: 1em;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  border-bottom: 0.1em solid var(--color-details);
+}
+
+footer > section:nth-of-type(1) nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1.6em;
+}
+
+footer > section:nth-of-type(1) nav a {
+  font-size: 0.9em;
+  font-weight: 500;
+  color: var(--color-text);
+  border-bottom: 0.2em solid var(--color-transparant);
+  padding-bottom: 0.8em;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+footer > section:nth-of-type(1) nav a.selected {
+  border-bottom: 0.2em solid var(--color-selected);
+  padding-bottom: 0.8em;
+  color: var(--color-svg);
+}
+
+footer > section:nth-of-type(1) > ul {
+  display: none;
+}
+
+footer > section:nth-of-type(1) > ul:target {
+  padding-top: 0.6em;
+  grid-row: 3;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1em;
+}
+
+footer > section:nth-of-type(1) > ul li h3, footer details {
+  font-size: 0.9em;
+  font-weight: 500;
+  color: var(--color-svg);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+footer > section:nth-of-type(1) > ul li a {
+  font-size: 0.9em;
+  font-weight: 400;
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+footer > section:nth-of-type(1) ul li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Bron:
+- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details
+*/
+
+details[open] summary {
+  display: none;
+}
+
+details[open] > *:not(summary) {
+  display: block;
+}
+
+footer summary {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.2em;
+}
+
+footer summary svg {
+  display: block;
+  fill: none;
+  height: 0.8em;
+  width: 0.8em;
+  stroke: var(--color-svg);
+  stroke-width: 5.33333;
+  overflow: visible;
+}
+
+footer > section:nth-of-type(1) button {
+  border: none;
+  background: var(--color-footer);
+  width: 1.4em;
+  height: 1.4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+footer > section:nth-of-type(1) button:nth-of-type(1) {
+  left: 0em;
+}
+
+footer > section:nth-of-type(1) button:nth-of-type(2) {
+  right: 0em;
+}
+
+footer > section:nth-of-type(1) button svg {
+  display: block;
+  fill: none;
+  height: 1.2em;
+  width: 1.2em;
+  stroke: var(--color-svg);
+  stroke-width: 3;
+  overflow: visible;
+}
+
+footer > div {
+  display:grid;
+  gap: 2em;
+  padding: 0em 1.3em;
+}
+
+footer > div ul {
+  list-style: none;
+  display: grid;
+  gap: 1em;
+  padding: 1em 0em;
+}
+
+footer > div a, footer > section:nth-of-type(2) nav:last-of-type a, footer > section:nth-of-type(2) p {
+  font-size: 0.9em;
+  font-weight: 400;
+  color: var(--color-svg);
+}
+
+footer > div section h3 {
+  font-size: 0.9em;
+  font-weight: 500;
+  color: var(--color-svg);
+}
+
+footer > section:nth-of-type(2) {
+  display:grid;
+  grid-template-rows: repeat(4, min-content);
+  grid-template-columns: min-content auto;
+  gap: 1.2em;
+  padding: 2em 1.3em;
+}
+
+footer > section:nth-of-type(2) h3 {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+footer > section:nth-of-type(2) ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+footer > section:nth-of-type(2) nav li {
+  padding-right: 1.5em;
+}
+
+footer > section:nth-of-type(2) button svg {
   display: block;
   height: 1.2em;
   width: 1.2em;
-  fill: currentcolor;
+  fill: var(--color-svg);
+}
+
+footer > section:nth-of-type(2) a svg {
+  display: block;
+  height: 1em;
+  width: 1em;
+  fill: var(--color-svg);
+}
+
+footer > section:nth-of-type(2) button {
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 0.9em;
+  font-weight: 500;
+  color: var(--color-svg);
+  width: max-content;
+  background: none;
+  border: none;
+}
+
+footer > section:nth-of-type(2) button:nth-of-type(1) {
+  grid-column: 1;
+  justify-self: start;
+}
+
+footer > section:nth-of-type(2) button:nth-of-type(2) {
+  grid-column: 2;
+  justify-self: start;
+}
+
+footer > section:nth-of-type(2) nav:nth-of-type(1) {
+  grid-column: 1 / 3;
+}
+
+footer > section:nth-of-type(2) p {
+  grid-column: 1 / 3;
+}
+
+footer > section:nth-of-type(2) nav:nth-of-type(2) {
+  grid-column: 1 / 3;
+  margin-top: -1em;
+}
+
+
+
+
+
+/****************/
+/*  FOOTER: MQ  */
+/****************/
+
+@media (min-width: 26.25em) {
+  footer > section:nth-of-type(1) button svg {
+    display: none;
+  }
+}
+
+@media (min-width: 46.5em) {
+  footer > div {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+   footer > section:nth-of-type(2) {
+    grid-template-columns: repeat(2, min-content) auto;
+    align-items: center;
+  }
+
+  footer > section:nth-of-type(2) nav:nth-of-type(1) {
+    grid-column: 3;
+    justify-self: end;
+  }
+}
+
+@media (min-width: 59.375em) {
+  footer > section:nth-of-type(2) {
+    grid-template-columns: max-content 1fr repeat(3, max-content);
+    grid-template-rows: min-content;
+    align-items: center;
+  }
+
+  footer > section:nth-of-type(2) p {
+    grid-row: 1;
+    grid-column: 1;
+    justify-self: start;
+  }
+
+  footer > section:nth-of-type(2) nav:nth-of-type(2) {
+    grid-row: 1;
+    grid-column: 2;
+    justify-self: start;
+    margin-top: 0;
+  }
+
+  footer > section:nth-of-type(2) button:nth-of-type(1) {
+    grid-row: 1;
+    grid-column: 3;
+    justify-self: end;
+  }
+
+  footer > section:nth-of-type(2) button:nth-of-type(2) {
+    grid-row: 1;
+    grid-column: 4;
+    justify-self: end;
+  }
+
+  footer > section:nth-of-type(2) nav:nth-of-type(1) {
+    grid-row: 1;
+    grid-column: 5;
+    justify-self: end;
+  }
+}
+
+@media (min-width: 93.75em) {
+    footer > section:nth-of-type(1) {
+      padding: 3em 5.4em;
+    }
+
+    footer > div, footer > section:nth-of-type(2) {
+      padding: 1.8em 2.7em; 
+    }
+}
+
+
+
+
+
+/*****************/
+/* STICKY FOOTER */
+/*****************/
+
+footer > section:last-of-type {
+  background: var(--color-background);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.3em;
+  padding: 1em;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+  z-index: 2;
+}
+
+footer > section:last-of-type.verborgen {
+  transform: translateY(100%);
+}
+
+footer > section:last-of-type button:nth-of-type(1) svg {
+  display: block;
+  fill: none;
+  height: 2.4em;
+  width: 2.4em;
+  stroke: var(--color-accent);
+  stroke-width: 2.66667;
+  overflow: visible;
+}
+
+footer > section:last-of-type button:not(:nth-of-type(1)) svg {
+  display: block;
+  fill: none;
+  height: 2.4em;
+  width: 2.4em;
+  stroke: var(--color-text);
+  stroke-width: 2;
+  overflow: visible;
+}
+
+footer > section:last-of-type button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4em;
+  font-size: 0.6em;
+  background: none;
+  border: none;
+}
+
+footer > section:last-of-type button:nth-of-type(1) {
+  color: var(--color-accent);
+}
+
+footer > section:last-of-type button:not(:nth-of-type(1)) {
+  color: var(--color-text);
+}
+
+
+
+
+
+/***********************/
+/*  STICKY FOOTER: MQ  */
+/***********************/
+
+@media (min-width: 46.5em) {
+  footer > section:last-of-type {
+    display: none;
+  }
 }

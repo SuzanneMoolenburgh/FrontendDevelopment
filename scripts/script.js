@@ -75,3 +75,105 @@ function headerScroll() {
 }
 
 window.addEventListener('scroll', headerScroll);
+
+
+
+
+
+/*********************/
+/*  FOOTER KNOPPEN   */
+/*********************/
+
+document.querySelectorAll("footer > section:nth-of-type(1)").forEach(function(section) {
+    const carouselFooter = section.querySelector("nav");
+    const buttonsFooter = section.querySelectorAll("button");
+    
+    const tabbladFooter = carouselFooter.querySelector("a").offsetWidth;
+
+    function terugFooter() {
+        carouselFooter.scrollBy({
+            left: -tabbladFooter,
+        });
+    }
+
+    function volgendeFooter() {
+        carouselFooter.scrollBy({
+            left: tabbladFooter,
+        });
+    }
+
+    function updateKnoppenFooter() {
+
+        if (carouselFooter.scrollLeft <= 0) {
+            buttonsFooter[0].style.display = "none";
+        } else {
+            buttonsFooter[0].style.display = "";
+        }
+
+        if (carouselFooter.scrollLeft + carouselFooter.clientWidth >= carouselFooter.scrollWidth - 1) {
+            buttonsFooter[1].style.display = "none";
+        } else {
+            buttonsFooter[1].style.display = "";
+        }
+    }
+
+    buttonsFooter[0].addEventListener("click", terugFooter);
+    buttonsFooter[1].addEventListener("click", volgendeFooter);
+    carouselFooter.addEventListener("scroll", updateKnoppenFooter);
+
+    updateKnoppenFooter();
+});
+
+
+
+
+
+
+/*********************/
+/*  FOOTER SELECTIE  */
+/*********************/
+
+/*Bronnen:
+- https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute#:~:text=The%20getAttribute()%20method%20of,the%20getAttributeNode()%20method%20instead
+- https://stackoverflow.com/questions/17949518/window-location-hash-what-is-it-and-its-use-cases
+*/
+
+const tabbladen = document.querySelectorAll('footer > section:nth-of-type(1) nav a');
+
+function selecteer() {
+  tabbladen.forEach(function(tabblad) {
+    if (tabblad.getAttribute('href') === location.hash) {
+      tabblad.classList.add('selected');
+    } else {
+      tabblad.classList.remove('selected');
+    }
+  });
+}
+
+window.addEventListener('hashchange', selecteer);
+window.addEventListener('load', selecteer);
+
+
+
+
+
+/*********************/
+/*   STICKY FOOTER   */
+/*********************/
+
+let oudePositie = window.scrollY;
+const footer = document.querySelector("footer > section:last-of-type");
+
+function footerToggle() {
+  const nieuwePositie = window.scrollY;
+
+  if (nieuwePositie > oudePositie) {
+    footer.classList.add("verborgen");
+  } else {
+    footer.classList.remove("verborgen");
+  }
+
+  oudePositie = nieuwePositie;
+};
+
+window.addEventListener("scroll", footerToggle);
