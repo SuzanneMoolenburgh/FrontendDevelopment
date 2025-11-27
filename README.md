@@ -161,8 +161,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   samen met je groepje opstellen
 
   Suzanne:
-    1.	Aria labels op data & time elementen
-    2.	Hulp bij scroll footer
+  1.	Aria labels op data & time elementen
+  2.	Hulp bij scroll footer
 
   Romaisa:
 
