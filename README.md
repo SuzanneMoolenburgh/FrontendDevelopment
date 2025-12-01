@@ -165,6 +165,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   2.	Hulp bij scroll footer
 
   Romaisa:
+  1. Position relative en absolute op plaatjes goed responsive maken 
+  2. Foto goed schalen en schaduw erop toevoegen
 
   Irem:
 
@@ -176,10 +178,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  Uit de meeting bleek dat bij mij het 'scrollen' op het moment dat de :target wordt geselecteerd onvermijdelijk is door de manier waarop ik het heb gedaan met een id, maar dit was gelukkig niet erg. Wel raadde ze aan om een smooth scroll-behavior op de html te zetten, zodat het nu in elk geval niet meer zo 'heftig' eruit ziet.
+
+  Wat betreft mijn vraag over de aria-labels kwamen we er niet uit, dus dit moet ik komende week nog verder gaan uitzoeken. Verder 
 
 </details>
 

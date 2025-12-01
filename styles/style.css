@@ -424,6 +424,20 @@ header > picture, header > button:not(:last-of-type), header > form {
 /*    FOOTER    */
 /****************/
 
+html {
+  scroll-behavior: smooth;
+}
+
+footer section:last-of-type h2 {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
 footer {
   background-color: var(--color-footer);
   padding-bottom: 5em;
@@ -474,6 +488,7 @@ footer > section:nth-of-type(1) nav a {
   padding-bottom: 0.8em;
   white-space: nowrap;
   overflow: hidden;
+  text-decoration: none;
 }
 
 footer > section:nth-of-type(1) nav a.selected {
@@ -510,6 +525,7 @@ footer > section:nth-of-type(1) > ul li a {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-decoration: none;
 }
 
 footer > section:nth-of-type(1) ul li {
@@ -597,6 +613,7 @@ footer > div a, footer > section:nth-of-type(2) nav:last-of-type a, footer > sec
   font-size: 0.9em;
   font-weight: 400;
   color: var(--color-svg);
+  text-decoration: none;
 }
 
 footer > div section h3 {
