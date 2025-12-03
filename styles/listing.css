@@ -9,7 +9,6 @@
     }
     
     header section:last-of-type {
-        background: var(--color-background);
         display: grid;
         grid-template-columns: min-content auto min-content;
         column-gap: 1em;
@@ -85,10 +84,6 @@
 /****************/
 /*     MAIN     */
 /****************/
-
-main {
-    background: var(--color-background);
-}
 
 main section:nth-of-type(1) {
     display: grid;
