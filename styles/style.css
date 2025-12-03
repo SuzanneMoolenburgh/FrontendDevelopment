@@ -169,11 +169,11 @@ header li a {
   font-size: 0.75em;
 }
 
-header li a span {
+header li a > p {
   transition: transform 0.3s ease;
 }
 
-header li:nth-of-type(1) > a span {
+header li:nth-of-type(1) > a > p {
   color: var(--color-svg);
   font-weight: 600;
   border-bottom: 0.3em solid var(--color-selected);
@@ -272,7 +272,7 @@ header.scroll li a lottie-player {
     padding-bottom: 0.2em;
   }
 
-  header li:nth-of-type(1) > a span {
+  header li:nth-of-type(1) > a > p {
     border-bottom: none;
   }
 
