@@ -23,7 +23,7 @@ main h1, main section > h2 {
 }
 
 main section {
-    margin-bottom: 3em;
+    margin-bottom: 1em;
 }
 
 main section div a {
@@ -198,7 +198,7 @@ main figcaption {
     color: var(--color-selected);
 }
 
-main section button{
+main section button {
     transition: transform 0.2s ease;
   }
 
@@ -213,6 +213,11 @@ main li button svg {
     stroke: #ffffff;
     stroke-width: 2;
     overflow: visible;
+    transition: fill 0.2s ease;
+}
+
+main li button svg:active {
+    fill: var(--color-accent);
 }
 
 
@@ -261,6 +266,15 @@ main li button svg {
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: background-color 0.2s ease;
+    }
+
+    main section div button:hover {
+        background-color: var(--color-hover);
+    }
+
+    main section div button:active {
+        background-color: var(--color-active);
     }
 }
 
@@ -270,7 +284,7 @@ main li button svg {
     }
 }
 
-@media (min-width: 1130px) {
+@media (min-width: 70.625em) {
     main section ul li {
         flex-basis: calc((100% - 3.5em) / 6);
     }

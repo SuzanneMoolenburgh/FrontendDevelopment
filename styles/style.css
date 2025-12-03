@@ -51,9 +51,13 @@
   --color-footer: #f7f7f7;
   --color-svg: #222222;
   --color-accent:#ff385c;
+  --color-accent-hover:#c22a46;
+  --color-accent-active:#931d33;
   --color-icon: #f2f2f2;
   --color-hover: #ebebeb;
-  --color-contrast: #f8f8f8;
+  --color-active: #cbcbcb;
+  --color-header: #ffffff;
+  --color-header-gradient: #f8f8f8;
   --color-shadow: #00000033;
   --color-text: #6a6a6a;
   --color-heart: rgba(0, 0, 0, 0.5);
@@ -64,20 +68,63 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: #121212;
+    --color-background: #181818;
     --color-footer: #1e1e1e;
     --color-svg: #e0e0e0;
     --color-accent: #ff385c;
-    --color-icon: #2a2a2a;
+    --color-icon: #363636;
     --color-hover: #2c2c2c;
-    --color-contrast: #1a1a1a;
-    --color-shadow: #00000099;
+    --color-accent-hover:#c22a46;
+    --color-accent-active:#931d33;
+    --color-active: #171717;
+    --color-header: #1e1e1e;
+    --color-header-gradient: #1a1a1a;
+    --color-shadow: #31313199;
     --color-text: #dcdcdc;
     --color-heart: rgba(255, 255, 255, 0.5);
     --color-selected: #ffffff;
     --color-details: #444444;
     --color-transparant: rgba(0, 0, 0, 0);
   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none;
+    scroll-behavior: auto;
+  }
+}
+
+
+
+
+/****************/
+/*  SKIP LINKS  */
+/****************/
+
+/* Bron:
+- https://www.accessibility.nl/kennis/zo-zet-je-skiplinks-voor-een-optimale-navigatie
+*/
+
+body > a {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-selected);
+  color: var(--color-background);
+  padding: 0.5em 1em;
+  border-radius: 1em;
+  z-index: 9999; 
+}
+
+body > a:focus {
+  top: 1em;
+  left: 1em;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
 }
 
 
@@ -93,7 +140,7 @@ body {
 }
 
 header {
-  background: linear-gradient(180deg, var(--color-background) 0%, var(--color-contrast)100%);
+  background: linear-gradient(180deg, var(--color-header) 0%, var(--color-header-gradient)100%);
   display: grid;
   grid-template-rows: repeat(2, auto);
   align-items: center;
@@ -136,10 +183,15 @@ header li:nth-of-type(1) > a span {
 header li a lottie-player {
   height: 4em;
   transition: height 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
-header.scroll li a lottie-player {
-  height: 0em;
+lottie-player:hover {
+    transform: scale(1.1);
+}
+
+lottie-player:active {
+    border: 0.1em solid var(--color-selected);
 }
 
 header li:not(:nth-of-type(1)) > a {
@@ -169,10 +221,16 @@ header > button:nth-of-type(4) {
   height: 3.5em;
   min-width: 10em;
   margin-top: 1em;
+  transition: border 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 
 header > button:nth-of-type(4):hover {
   border: 0.125em solid var(--color-selected);
+}
+
+header > button:nth-of-type(4):active {
+  background-color: var(--color-active);
 }
 
 header > button:nth-of-type(4) svg {
@@ -185,6 +243,10 @@ header > button:nth-of-type(4) svg {
 
 header > picture, header > button:not(:last-of-type), header > form {
   display: none;
+}
+
+header.scroll li a lottie-player {
+  height: 0em;
 }
 
 
@@ -205,10 +267,6 @@ header > picture, header > button:not(:last-of-type), header > form {
     transition: padding 0.2s ease;
   }
 
-  header.scroll {
-    padding: 0.4em 3em 0em 3em;
-  }
-
   header li a {
     border-bottom: 0.25em solid var(--color-selected);
     padding-bottom: 0.2em;
@@ -224,11 +282,6 @@ header > picture, header > button:not(:last-of-type), header > form {
     opacity: 1;
   }
 
-  header.scroll nav {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-
   header > picture {
     width: 2.2em;
     height: 2.2em;
@@ -239,7 +292,7 @@ header > picture, header > button:not(:last-of-type), header > form {
 
   header > form {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(3em, 1fr));
     column-gap: 1.5em;
     grid-row: 2;
     grid-column: 1 / 6;
@@ -258,15 +311,6 @@ header > picture, header > button:not(:last-of-type), header > form {
     padding: 0.6em 0.7em 0.6em 2.7em;
   }
 
-  header.scroll > form {
-    grid-row: 1;
-    grid-column: 1 / 6;
-    width: auto;
-    height: auto;
-    align-self: center;
-    grid-template-columns: repeat(3, min-content);
-  }
-
   header > form label {
     grid-row: 1;
     align-self: end;
@@ -280,6 +324,18 @@ header > picture, header > button:not(:last-of-type), header > form {
     font-size: 1.2em;
     color: var(--color-text);
     background-color: var(--color-background);
+    min-width: 3em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /* Bron:
+  - https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::placeholder
+  */
+
+  header > form input::placeholder {
+    color: var(--color-selected);
   }
 
   header > form label:nth-of-type(1), header > form input:nth-of-type(1) {
@@ -299,15 +355,10 @@ header > picture, header > button:not(:last-of-type), header > form {
     fill: none;
     height: 1.2em;
     width: 1.2em;
-    stroke: var(--color-svg);
+    stroke: white;
     stroke-width: 4;
     overflow: visible;
     transition: width 0.2s ease, height 0.2s ease;
-  }
-
-  header.scroll > form > button svg {
-    height: 1em;
-    width: 1em;
   }
 
   header > form button {
@@ -323,11 +374,15 @@ header > picture, header > button:not(:last-of-type), header > form {
     justify-content: center;
     align-items: center;
     transition: width 0.2s ease, height 0.2s ease;
+    transition: background-color 0.2s ease;
   }
 
-  header.scroll > form button {
-    width: 2.5em;
-    height: 2.5em;
+  header > form button:hover {
+    background-color: var(--color-accent-hover);
+  }
+
+  header > form button:active {
+    background-color: var(--color-accent-active);
   }
 
   header > button:nth-of-type(2) {
@@ -366,6 +421,16 @@ header > picture, header > button:not(:last-of-type), header > form {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 3;
+    transition: background-color 0.2s ease;
+  }
+
+  header > button:nth-of-type(2):hover, header > button:nth-of-type(3):hover {
+    background-color: var(--color-hover);
+  }
+
+  header > button:nth-of-type(2):active, header > button:nth-of-type(3):active {
+    background-color: var(--color-active);
   }
 
   header nav {
@@ -389,13 +454,6 @@ header > picture, header > button:not(:last-of-type), header > form {
     font-size: 0.9em;
   }
 
-  lottie-player {
-    transition: transform 0.2s ease;
-  }
-
-  lottie-player:hover {
-    transform: scale(1.1);
-  }
 }
 
 @media (min-width: 70.4375em) {
@@ -413,7 +471,46 @@ header > picture, header > button:not(:last-of-type), header > form {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 3;
+    transition: color 0.2s ease;
   }
+
+  header > button:nth-of-type(1):hover {
+    color: var(--color-accent);
+  }
+
+  header > button:nth-of-type(1):active {
+    color: var(--color-accent-active);
+  }
+
+  header.scroll {
+    padding: 0.4em 3em 0em 3em;
+  }
+
+  header.scroll nav {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  header.scroll > form {
+    grid-row: 1;
+    grid-column: 2 / 4;
+    width: 70%;
+    height: auto;
+    align-self: center; 
+    justify-self: center;
+  }
+
+  header.scroll > form > button svg {
+    height: 1em;
+    width: 1em;
+  }
+
+  header.scroll > form button {
+    width: 2.5em;
+    height: 2.5em;
+  }
+
 }
 
 
@@ -663,6 +760,15 @@ footer > section:nth-of-type(2) a svg {
   height: 1em;
   width: 1em;
   fill: var(--color-svg);
+  transition: fill 0.2s ease;
+}
+
+footer > section:nth-of-type(2) a svg:hover {
+  fill: var(--color-accent);
+}
+
+footer > section:nth-of-type(2) a svg:active {
+  fill: var(--color-accent-active);;
 }
 
 footer > section:nth-of-type(2) button {
@@ -676,6 +782,15 @@ footer > section:nth-of-type(2) button {
   width: max-content;
   background: none;
   border: none;
+  transition: color 0.2s ease;
+}
+
+footer > section:nth-of-type(2) button:hover {
+  color: var(--color-accent);
+}
+
+footer > section:nth-of-type(2) button:active {
+  color: var(--color-accent-active);
 }
 
 footer > section:nth-of-type(2) button:nth-of-type(1) {
@@ -835,6 +950,15 @@ footer > section:last-of-type button {
   font-size: 0.6em;
   background: none;
   border: none;
+  transition: background 0.2s ease;
+}
+
+footer > section:last-of-type button:hover {
+  background: var(--color-hover);
+}
+
+footer > section:last-of-type button:active {
+  background: var(--color-active);
 }
 
 footer > section:last-of-type button:nth-of-type(1) {

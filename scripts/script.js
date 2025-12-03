@@ -7,52 +7,55 @@
 - https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollBy
 - https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollLeft
 - https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp
+- https://www.w3schools.com/js/js_window_location.asp
+- https://stackoverflow.com/questions/75357525/how-to-check-whether-window-location-pathname-ends-with-search
 */
 
-document.querySelectorAll("main section").forEach(function(section) {
-    const carousel = section.querySelector("ul");
-    const buttons = section.querySelectorAll("div button");
-    
-    const advertentie = carousel.querySelector("a").offsetWidth;
+if (window.location.pathname.endsWith("index.html")) {
 
-    function terug() {
-        carousel.scrollBy({
-            left: -2 * advertentie,
-            behavior: "smooth"
-        });
-    }
+    document.querySelectorAll("main section").forEach(function(section) {
+        const carousel = section.querySelector("ul");
+        const buttons = section.querySelectorAll("div button");
+        const advertentie = carousel.querySelector("a").offsetWidth;
 
-    function volgende() {
-        carousel.scrollBy({
-            left: 2 * advertentie,
-            behavior: "smooth"
-        });
-    }
-
-    function disableKnop() {
-        if (carousel.scrollLeft === 0) {
-            buttons[0].disabled = true;
-        } else {
-            buttons[0].disabled = false;
+        function terug() {
+            carousel.scrollBy({
+                left: -2 * advertentie,
+                behavior: "smooth"
+            });
         }
 
-        if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 1) {
-            buttons[1].disabled = true;
-        } else {
-            buttons[1].disabled = false;
+        function volgende() {
+            carousel.scrollBy({
+                left: 2 * advertentie,
+                behavior: "smooth"
+            });
         }
-    }
 
-    buttons[0].addEventListener("click", terug);
-    buttons[1].addEventListener("click", volgende);
+        function disableKnop() {
+            if (carousel.scrollLeft === 0) {
+                buttons[0].disabled = true;
+            } else {
+                buttons[0].disabled = false;
+            }
 
-    carousel.addEventListener("scroll", disableKnop);
+            if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 1) {
+                buttons[1].disabled = true;
+            } else {
+                buttons[1].disabled = false;
+            }
+        }
 
-    disableKnop();
+        buttons[0].addEventListener("click", terug);
+        buttons[1].addEventListener("click", volgende);
 
-});
+        carousel.addEventListener("scroll", disableKnop);
 
+        disableKnop();
 
+    });
+
+}
 
 
 
@@ -88,7 +91,7 @@ document.querySelectorAll("footer > section:nth-of-type(1)").forEach(function(se
     const carouselFooter = section.querySelector("nav");
     const buttonsFooter = section.querySelectorAll("button");
     
-    const tabbladFooter = carouselFooter.querySelector("a").offsetWidth;
+    const tabbladFooter = carouselFooter.querySelector("footer a").offsetWidth;
 
     function terugFooter() {
         carouselFooter.scrollBy({
