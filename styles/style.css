@@ -455,35 +455,6 @@ header.scroll li a lottie-player {
     font-size: 0.9em;
   }
 
-}
-
-@media (min-width: 70.4375em) {
-  header > button:nth-of-type(1) {
-    grid-column: 3;
-    grid-row: 1;
-    background-color: var(--color-transparant);
-    color: var(--color-selected);
-    border: none;
-    border-radius: 2em;
-    font-size: 0.9em;
-    font-weight: 600;
-    width: 7em;
-    height: 3em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 3;
-    transition: color 0.2s ease;
-  }
-
-  header > button:nth-of-type(1):hover {
-    color: var(--color-accent);
-  }
-
-  header > button:nth-of-type(1):active {
-    color: var(--color-accent-active);
-  }
-
   header.scroll {
     padding: 0.4em 3em 0em 3em;
   }
@@ -514,7 +485,46 @@ header.scroll li a lottie-player {
 
 }
 
+@media (min-width: 70.4375em) {
+  header > button:nth-of-type(1) {
+    grid-column: 3;
+    grid-row: 1;
+    background-color: var(--color-transparant);
+    color: var(--color-selected);
+    border: none;
+    border-radius: 2em;
+    font-size: 0.9em;
+    font-weight: 600;
+    width: 7em;
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    transition: color 0.2s ease;
+  }
 
+  header > button:nth-of-type(1):hover {
+    color: var(--color-accent);
+  }
+
+  header > button:nth-of-type(1):active {
+    color: var(--color-accent-active);
+  }
+
+}
+
+/* @media (orientation: landscape) and (max-height: 20em) {
+  header {
+    position: relative;
+  }
+
+  header.scroll li a lottie-player {
+    height: 4em;
+    transform: none;
+  }
+
+} */
 
 
 
