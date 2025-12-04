@@ -180,8 +180,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   Uit de meeting bleek dat bij mij het 'scrollen' op het moment dat de :target wordt geselecteerd onvermijdelijk is door de manier waarop ik het heb gedaan met een id,   maar dit was gelukkig niet erg. Wel raadde ze aan om een smooth scroll-behavior op de html te zetten, zodat het nu in elk geval niet meer zo 'heftig' eruit ziet.
 
-  Wat betreft mijn vraag over de aria-labels kwamen we er niet uit, dus dit moet ik komende week nog verder gaan uitzoeken. Verder 
-
+  Wat betreft mijn vraag over de aria-labels kwamen we er niet uit, dus dit moet ik komende week nog verder gaan uitzoeken.
 </details>
 
 
@@ -208,7 +207,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Afgelopen week is het gelukt om mijn twee pagina's wat betreft HTML en CSS zo goed als af te krijgen.
+
+  <img src="readme-images/voortgang3-a.png" width="600px" alt="screenshots van de tweede pagina en skip links">
+  
+  In de tweede helft van de week ben ik dan ook vooral bezig geweest met de toegankelijkheid van mijn website door bijvoorbeeld verder te gaan met het toevoegen van button states, skip links, aria labels en een media query voor reduced motion bij animaties. Ook heb ik enkele alt teksten van plaatjes verbeterd en meer beschrijvend gemaakt (ook 'Foto van...' weggehaald) en ben ik mijn site aan het testen (en verbeteren) op basis van de screenreader en mobiel landscape formaat.
+
+  <img src="readme-images/voortgang3-b.png" width="600px" alt="screenshots van de een ul met aria-labels">
+
+  De laatste paar dagen hoop ik hier en daar nog kleine verbeteringen te kunnen doen en uiteindelijk een goed resultaat te kunnen opleveren.
 
 
   ### Agenda voor meeting
@@ -219,8 +226,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   2. Vraag bronvermelding
 
   Romaisa:
-  1. Position relative en absolute op plaatjes goed responsive maken 
-  2. Foto goed schalen en schaduw erop toevoegen
 
   Irem:
 
