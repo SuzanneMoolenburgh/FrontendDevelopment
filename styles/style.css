@@ -258,7 +258,7 @@ header.scroll li a lottie-player {
 /*  HEADER: MQ  */
 /****************/
 
-@media (orientation: landscape) {
+@media (orientation: landscape) and (max-height: 30em) {
   header {
     position: relative;
   }
