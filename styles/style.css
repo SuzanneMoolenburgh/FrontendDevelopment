@@ -242,7 +242,7 @@ header > button:nth-of-type(4) svg {
   align-self: center;
 }
 
-header > picture, header > button:not(:last-of-type), header > form {
+header > a, header > button:not(:last-of-type), header > form {
   display: none;
 }
 
@@ -283,12 +283,15 @@ header.scroll li a lottie-player {
     opacity: 1;
   }
 
-  header > picture {
-    width: 2.2em;
-    height: 2.2em;
+  header > a {
+    display: block;
     grid-column: 1;
     grid-row: 1;
-    display: block;
+  }
+
+  header picture {
+    width: 2.2em;
+    height: 2.2em;
   }
 
   header > form {

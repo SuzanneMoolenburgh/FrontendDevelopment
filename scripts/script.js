@@ -12,7 +12,7 @@
 - https://stackoverflow.com/questions/75357525/how-to-check-whether-window-location-pathname-ends-with-search
 */
 
-if (window.location.pathname.endsWith("index.html") || window.location.pathname.endsWith("FrontendDevelopment")) {
+if (window.location.pathname.endsWith("index.html")) {
 
     document.querySelectorAll("main section").forEach(function(section) {
         const carousel = section.querySelector("ul");
