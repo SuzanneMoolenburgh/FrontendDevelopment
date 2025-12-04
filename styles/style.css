@@ -258,18 +258,6 @@ header.scroll li a lottie-player {
 /*  HEADER: MQ  */
 /****************/
 
-@media (orientation: landscape) and (max-height: 30em) {
-  header {
-    position: relative;
-  }
-
-  header.scroll li a lottie-player {
-    height: 4em;
-    transform: none;
-  }
-
-}
-
 @media (min-width: 46.5em) {
   header {
     grid-template-columns: min-content 1fr repeat(3, min-content);
