@@ -7,11 +7,12 @@
 - https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollBy
 - https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollLeft
 - https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp
+- https://stackoverflow.com/questions/51219064/run-function-only-on-index-html-page-javascript
 - https://www.w3schools.com/js/js_window_location.asp
 - https://stackoverflow.com/questions/75357525/how-to-check-whether-window-location-pathname-ends-with-search
 */
 
-if (window.location.pathname.endsWith("index.html")) {
+if (window.location.pathname.endsWith("index.html") || window.location.pathname.endsWith("FrontendDevelopment")) {
 
     document.querySelectorAll("main section").forEach(function(section) {
         const carousel = section.querySelector("ul");
