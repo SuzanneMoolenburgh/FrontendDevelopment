@@ -213,7 +213,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   
   In de tweede helft van de week ben ik dan ook vooral bezig geweest met de toegankelijkheid van mijn website door bijvoorbeeld verder te gaan met het toevoegen van button states, skip links, aria labels en een media query voor reduced motion bij animaties. Ook heb ik enkele alt teksten van plaatjes verbeterd en meer beschrijvend gemaakt (ook 'Foto van...' weggehaald) en ben ik mijn site aan het testen (en verbeteren) op basis van de screenreader en mobiel landscape formaat.
 
-  <img src="readme-images/voortgang3-b.png" width="600px" alt="screenshots van de een ul met aria-labels">
+  <img src="readme-images/voortgang3-c.png" width="600px" alt="screenshots van de een ul met aria-labels">
 
   De laatste paar dagen hoop ik hier en daar nog kleine verbeteringen te kunnen doen en uiteindelijk een goed resultaat te kunnen opleveren.
 
