@@ -178,7 +178,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  Uit de meeting bleek dat bij mij het 'scrollen' op het moment dat de :target wordt geselecteerd onvermijdelijk is door de manier waarop ik het heb gedaan met een id, maar dit was gelukkig niet erg. Wel raadde ze aan om een smooth scroll-behavior op de html te zetten, zodat het nu in elk geval niet meer zo 'heftig' eruit ziet.
+  Uit de meeting bleek dat bij mij het 'scrollen' op het moment dat de :target wordt geselecteerd onvermijdelijk is door de manier waarop ik het heb gedaan met een id,   maar dit was gelukkig niet erg. Wel raadde ze aan om een smooth scroll-behavior op de html te zetten, zodat het nu in elk geval niet meer zo 'heftig' eruit ziet.
 
   Wat betreft mijn vraag over de aria-labels kwamen we er niet uit, dus dit moet ik komende week nog verder gaan uitzoeken. Verder 
 
@@ -214,11 +214,19 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  Suzanne:
+  1. Feedback aria labels
+  2. Vraag bronvermelding
+
+  Romaisa:
+  1. Position relative en absolute op plaatjes goed responsive maken 
+  2. Foto goed schalen en schaduw erop toevoegen
+
+  Irem:
+
+  Marissa:
+
+  Caspar:
 
 
   ### Verslag van meeting
