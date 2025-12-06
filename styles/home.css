@@ -3,7 +3,7 @@
 /*********************/
 
 main {
-    padding: 1.4em 1em;
+    padding: 2em 1.5em;
 }
 
 /*Bron:
@@ -22,27 +22,20 @@ main h1, main section > h2 {
 }
 
 main section {
-    margin-bottom: 1em;
+    display: grid;
+    grid-template-rows: max-content auto;
+    gap: 1em;
+    align-items: center;
+    margin-bottom: 5em;
 }
 
-main section div a {
+/* Kop */
+
+main section > a {
+    grid-row: 1;
     font-size: 1.1em;
     font-weight: 600;
     color: var(--color-svg);
-}
-
-main section a {
-    text-decoration: none;
-}
-
-main section div {
-    display: grid;
-    grid-template-columns: auto repeat(2, min-content);
-    gap: 0.5em;
-    align-items: center;
-}
-
-main section div a {
     grid-column: 1;
     display:flex;
     flex-direction: row;
@@ -50,7 +43,11 @@ main section div a {
     gap: 0.1em;
 }
 
-main section div a svg {
+main section a {
+    text-decoration: none;
+}
+
+main section > a svg {
     display: block;
     fill: none;
     height: 0.8em;
@@ -60,25 +57,84 @@ main section div a svg {
     overflow: visible;
 }
 
-main section div button {
-    display:none
-}
+/* Carrousel */
 
 main section ul {
+    grid-row: 2;
     display: flex;
     flex-direction: row;
     gap: 0.7em;   
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    margin-top: 1em;
     overscroll-behavior-x: contain;
     scrollbar-width: none;
 }
 
-/*Bron:
-- https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/calc
-*/
+main section:nth-of-type(1) ul {
+    anchor-name: --carousel-parijs;
+}
+
+main section:nth-of-type(2) ul {
+    anchor-name: --carousel-londen;
+}
+
+/* Bron:
+- https://chrome.dev/carousel-configurator/ */
+
+main section:nth-of-type(1) ul::scroll-button(*), main section:nth-of-type(2) ul::scroll-button(*) {
+    position: fixed;
+    position-anchor: --carousel-parijs;
+    position-visibility: always;
+    position-area: block-end center;
+    background-color: var(--color-icon);
+    background-size: 0.9em;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    border-radius: 2em;
+    margin-top: 0.8em;
+    width: 2em;
+    height: 2em;
+    transition: background-color 0.2s ease;
+}
+
+main section:nth-of-type(2) ul::scroll-button(*) {
+    position-anchor: --carousel-londen;
+}
+
+main section ul::scroll-button(*):hover {
+    background-color: var(--color-hover);
+}
+
+main section ul::scroll-button(*):active {
+    background-color: var(--color-active);
+}
+
+main section ul::scroll-button(*):disabled {
+    background-color: var(--color-background);
+    border: 0.15em solid var(--color-disabled);
+}
+
+main section ul::scroll-button(right) {
+    content: '' / 'Volgende';
+    background-image: url(../images/scroll-volgende-lm.svg);
+    justify-self: end;
+}
+
+main section ul::scroll-button(left) {
+    content: '' / 'Vorige';
+    background-image: url(../images/scroll-vorige-lm.svg);
+    justify-self: start;
+}
+
+main section ul::scroll-button(right):disabled {
+    background-image: url(../images/scroll-volgende-disabled.svg);
+}
+
+main section ul::scroll-button(left):disabled {
+    background-image: url(../images/scroll-vorige-disabled.svg);
+}
 
 main section ul > li {
     list-style: none;
@@ -101,9 +157,9 @@ main section ul li a {
 - https://www.digitalocean.com/community/tutorials/css-cropping-images-object-fit
 */
 
-main li img:nth-of-type(1) {
+main li img {
     grid-column: 1 / 5;
-    grid-row-start: 1;
+    grid-row: 1;
     width: 100%;
     aspect-ratio: 10.5 / 10;
     object-fit: cover;
@@ -113,7 +169,7 @@ main li img:nth-of-type(1) {
 
 main li h3 {
     grid-column: 1 / 5;
-    grid-row-start: 2;
+    grid-row: 2;
     font-size: 0.8em;
     font-weight: 500;
     color: var(--color-svg);
@@ -164,6 +220,8 @@ main data svg {
     fill: var(--color-svg);
 }
 
+/* Favorieten knop */
+
 main li button {
     position: absolute;
     top: 0em;
@@ -175,6 +233,22 @@ main li button {
     width: 1.9em;
     height: 1.9em;
 }
+
+main li button svg {
+    display: block;
+    fill: var(--color-heart-static);
+    aspect-ratio: 1;
+    stroke: var(--color-white-static);
+    stroke-width: 2;
+    overflow: visible;
+    transition: fill 0.2s ease;
+}
+
+main li button svg:active {
+    fill: var(--color-accent);
+}
+
+/* 'Favoriet van gasten' label */
 
 main figure {
     background: var(--color-background);
@@ -197,28 +271,6 @@ main figcaption {
     color: var(--color-selected);
 }
 
-main section button {
-    transition: transform 0.2s ease;
-  }
-
-main section button:hover {
-    transform: scale(1.1);
-  }
-
-main li button svg {
-    display: block;
-    fill: rgba(0, 0, 0, 0.5);
-    aspect-ratio: 1;
-    stroke: #ffffff;
-    stroke-width: 2;
-    overflow: visible;
-    transition: fill 0.2s ease;
-}
-
-main li button svg:active {
-    fill: var(--color-accent);
-}
-
 
 
 
@@ -227,53 +279,23 @@ main li button svg:active {
 /*   MAIN: MQ   */
 /****************/
 
-@media (min-width: 375px) {
-    main {
-        padding: 2em 1.5em;
-    }
-}
-
 @media (min-width: 46.5em) {
+    main section {
+        margin-bottom: 3em;
+    }
+
+    main section:nth-of-type(1) ul::scroll-button(*), main section:nth-of-type(2) ul::scroll-button(*) {
+        position-area: block-start center;
+        margin-bottom: 0.8em;
+    }
+
+    main section:nth-of-type(1) ul::scroll-button(left), main section:nth-of-type(2) ul::scroll-button(left) {
+        justify-self: end;
+        margin-right: 2.8em;
+    }
+    
     main section ul li {
-        flex-basis: calc((100% - 2.1em) / 4);
-    }
-
-    main section div button svg {
-        display: block;
-        fill: none;
-        height: 0.8em;
-        width: 0.8em;
-        stroke: var(--color-svg);
-        stroke-width: 4;
-        overflow: visible;
-    }
-
-    main section div > button:nth-of-type(1) {
-        grid-column: 2;
-    }
-
-    main section div > button:nth-of-type(2) {
-        grid-column: 3;
-    }
-
-    main section div button {
-        background-color: var(--color-icon);
-        border: none;
-        border-radius: 100%;
-        width: 1.9em;
-        height: 1.9em;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: background-color 0.2s ease;
-    }
-
-    main section div button:hover {
-        background-color: var(--color-hover);
-    }
-
-    main section div button:active {
-        background-color: var(--color-active);
+    flex-basis: calc((100% - 2.1em) / 4);
     }
 }
 
@@ -296,5 +318,24 @@ main li button svg:active {
 
     main section ul li {
         flex-basis: calc((100% - 4.2em) / 7);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+
+  main section ul::scroll-button(right) {
+      background-image: url(../images/scroll-volgende-dm.svg);
+    }
+
+  main section ul::scroll-button(left) {
+      background-image: url(../images/scroll-vorige-dm.svg);
+    }
+
+  main section ul::scroll-button(right):disabled {
+        background-image: url(../images/scroll-volgende-disabled-dm.svg);
+    }
+
+    main section ul::scroll-button(left):disabled {
+        background-image: url(../images/scroll-vorige-disabled-dm.svg);
     }
 }

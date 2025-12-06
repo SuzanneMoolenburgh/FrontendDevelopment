@@ -17,10 +17,6 @@
 
 </head>
 
-<!-- Bron:
- - https://www.codecademy.com/resources/docs/html/semantic-html/meter
--->
-
 <body>
 	<a href="#maincontent">Ga direct naar inhoud</a>
 	<header>
@@ -44,23 +40,28 @@
 			Begin je zoektocht
 		</button>
 		<form>
-			<label for="waar">Waar</label>
-			<input type="text" id="waar" placeholder="Bestemmingen zoeken">
-			<label for="wanneer">Wanneer</label>
-			<input type="date" id="wanneer">
-			<label for="wie">Wie</label>
-			<input list="gasten-opties" id="wie" name="gasten-opties" placeholder="Gasten toevoegen">
-			<datalist id="gasten-opties">
-				<option value="Volwassenen"></option>
-				<option value="Kinderen"></option>
-				<option value="Baby's"></option>
-				<option value="Huisdieren"></option>
-			</datalist>
+			<label>
+				Waar
+				<input type="text" placeholder="Bestemmingen zoeken">
+			</label>
+			<label>
+				Wanneer
+				<input type="date">
+			</label>
+			<label>
+				Wie
+				<input list="gasten-opties" placeholder="Gasten toevoegen">
+				<datalist id="gasten-opties">
+					<option value="Volwassenen"></option>
+					<option value="Kinderen"></option>
+					<option value="Baby's"></option>
+					<option value="Huisdieren"></option>
+				</datalist>
+			</label>
 			<button aria-label="Verstuur het formulier">
 				<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false"><path d="m20.666 20.666 10 10"></path><path d="m24.0002 12.6668c0 6.2593-5.0741 11.3334-11.3334 11.3334-6.2592 0-11.3333-5.0741-11.3333-11.3334 0-6.2592 5.0741-11.3333 11.3333-11.3333 6.2593 0 11.3334 5.0741 11.3334 11.3333z"></path></svg>
 			</button>
 		</form>
-
 		<section>
 			<h2>Mobiele navigatie</h2>
 			<a href="index.html" aria-label="Ga terug naar de startpagina">
@@ -125,8 +126,11 @@
 					</li>
 				</ul>
 
-				<output>1 / 7</output>
-				
+<!-- Bron:
+- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/output
+-->
+
+				<output>1 / 7</output>			
 				<button>
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true" role="presentation" focusable="false"><path fill-rule="evenodd" d="M3 11.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm5 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm5 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm-10-5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm5 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm5 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm-10-5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm5 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm5 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"></path></svg>
 					Alle foto's
@@ -135,7 +139,6 @@
 		</section>
 		<section>
 			<h2>Kamer in Parijs, Frankrijk</h2>
-
 			<ul>
 				<li>1 eenpersoonsbed</li>
 				<li>Gedeelde badkamer</li>
@@ -171,6 +174,11 @@
 					recensies
 				</li>
 			</ul>
+
+<!-- Bron:
+- https://www.freepik.com/icon/woman_6997662#fromView=keyword&page=1&position=2&uuid=8eed55b1-2946-4182-b7b0-1430b7c773b7
+-->
+
 			<article>
 				<h3>Verblijf bij Carole</h3>
 				<img src="images/eigenaar.png" alt="Vrouwelijke eigenaar">
@@ -246,13 +254,17 @@
 				Toon alle 43 voorzieningen
 			</button>
 		</section>
+
+<!-- Bron:
+- https://maps.app.goo.gl/bmTcqM7kED8QMavU8 -->
+
 		<section>
 			<h2>Waar je verblijft</h2>
 			<p>Parijs, Île-de-France, Frankrijk</p>
 			<iframe title="Kaart van Parijs" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2625.312556635618!2d2.3507222!3d48.85225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDjCsDUxJzA4LjEiTiAywrAyMScwMi42IkU!5e0!3m2!1snl!2snl!4v1764278236078!5m2!1snl!2snl" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 			<p>De locatie van deze accommodatie is geverifieerd en de exacte locatie wordt na de boeking verstrekt.</p>
 			<button>Ontdek hoe verificatie werkt.</button>
-		</section>
+		</section> 
 		<section>
 			<h2>Favoriet van gasten</h2>
 			<img src="images/laurel-left.png" alt="">
@@ -301,6 +313,11 @@
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false"><path d="M16.17 2a3 3 0 0 1 1.98.74l.14.14 11 11a3 3 0 0 1 .14 4.1l-.14.14L18.12 29.3a3 3 0 0 1-4.1.14l-.14-.14-11-11A3 3 0 0 1 2 16.37l-.01-.2V5a3 3 0 0 1 2.82-3h11.35zm0 2H5a1 1 0 0 0-1 .88v11.29a1 1 0 0 0 .2.61l.1.1 11 11a1 1 0 0 0 1.31.08l.1-.08L27.88 16.7a1 1 0 0 0 .08-1.32l-.08-.1-11-11a1 1 0 0 0-.58-.28L16.17 4zM9 6a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm0 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"></path></svg>
 				</li>
 			</ul>
+
+<!-- Bron:
+- https://icon-icons.com/icon/female-woman-user-people-avatar-white-tone/159354
+-->
+
 			<ul>
 				<li aria-label="Een review met een beoordeling van 5 sterren.">
 					<data aria-hidden="true" value="5,0">
@@ -365,30 +382,6 @@
 	<footer>
 		<section>
 			<h2>Inspiratie voor toekomstige uitstapjes</h2>
-			<div>
-				<nav>
-					<ul>
-						<li>
-							<a href="#populair">Populair</a>
-						</li>
-						<li>
-							<a href="#kunst-en-cultuur">Kunst en Cultuur</a>
-						</li>	
-						<li>
-							<a href="#strand">Strand</a>
-						</li>
-						<li>
-							<a href="#bergen">Bergen</a>
-						</li>
-					</ul>
-				</nav>
-				<button aria-label="Ga terug">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-label="tabbladen achteruit scrollen" role="img" focusable="false"><path fill="none" d="M20 28 8.7 16.7a1 1 0 0 1 0-1.4L20 4"></path></svg>
-				</button>
-				<button aria-label="Volgende">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-label="tabbladen vooruit scrollen" role="img" focusable="false"><path fill="none" d="m12 4 11.3 11.3a1 1 0 0 1 0 1.4L12 28"></path></svg>
-				</button>
-			</div>
     		<ul id = "populair">
         		<li>
             		<h3>San Antonio</h3>
@@ -549,142 +542,153 @@
 					</details>
 				</li>
 			</ul>
+			<nav>
+				<ul>
+					<li>
+						<a href="#populair">Populair</a>
+					</li>
+					<li>
+						<a href="#kunst-en-cultuur">Kunst en Cultuur</a>
+					</li>	
+					<li>
+						<a href="#strand">Strand</a>
+					</li>
+					<li>
+						<a href="#bergen">Bergen</a>
+					</li>
+				</ul>
+			</nav>
 		</section>
-		<div>
-			<section>
-				<h3>Support</h3>
-					<nav>
-						<ul>
-							<li>
-								<a href="#">
-									Helpcentrum
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									Hulp bij een veiligheidsprobleem
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									Aircover
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									Antidiscriminatie
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									Hulp voor mensen met beperking
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									Annuleringsmogelijkheden
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									Problemen in de buurt melden
-								</a>
-							</li>
-						</ul>
-					</nav>
-			</section>
-			<section>
-				<h3>Hosten</h3>
-					<nav>
-						<ul>
-							<li>
-								<a href="#">
-									Je woning op Airbnb zetten
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									Jouw activiteit op Airbnb
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									Jouw service op Airbnb
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									AirCover voor hosts
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									Informatie voor hosts
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									Communityforum
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									Verantwoord verhuren
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									Gratis training over verhuren
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									Co-host zoeken
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									Een host doorverwijzen
-								</a>
-							</li>
-						</ul>
-					</nav>
-			</section>
-			<section>
-				<h3>Airbnb</h3>
-					<nav>
-						<ul>
-							<li>
-								<a href="#">
-									Airbnb 2025: Nieuw deze zomer
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									Redactie
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									Vacatures
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									Investeerders
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									Noodonderdak via Airbnb.org
-								</a>
-							</li>
-						</ul>
-					</nav>
-			</section>
-		</div>
 		<section>
-			<h3>Instellingen & over ons</h3>
+			<h2>Footer links</h2>
+			<nav>
+				<h3>Support</h3>
+				<ul>
+					<li>
+						<a href="#">
+							Helpcentrum
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Hulp bij een veiligheidsprobleem
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Aircover
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Antidiscriminatie
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Hulp voor mensen met beperking
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Annuleringsmogelijkheden
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Problemen in de buurt melden
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<nav>
+				<h3>Hosten</h3>
+				<ul>
+					<li>
+						<a href="#">
+							Je woning op Airbnb zetten
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Jouw activiteit op Airbnb
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Jouw service op Airbnb
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							AirCover voor hosts
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Informatie voor hosts
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Communityforum
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Verantwoord verhuren
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Gratis training over verhuren
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Co-host zoeken
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Een host doorverwijzen
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<nav>
+				<h3>Airbnb</h3>
+				<ul>
+					<li>
+						<a href="#">
+							Airbnb 2025: Nieuw deze zomer
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Redactie
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Vacatures
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Investeerders
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Noodonderdak via Airbnb.org
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</section>
+		<section>
+			<h2>Instellingen & over ons</h2>
 			<button aria-label="Verander de taal">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true" role="presentation" focusable="false"><path d="M8 .25a7.77 7.77 0 0 1 7.75 7.78 7.75 7.75 0 0 1-7.52 7.72h-.25A7.75 7.75 0 0 1 .25 8.24v-.25A7.75 7.75 0 0 1 8 .25zm1.95 8.5h-3.9c.15 2.9 1.17 5.34 1.88 5.5H8c.68 0 1.72-2.37 1.93-5.23zm4.26 0h-2.76c-.09 1.96-.53 3.78-1.18 5.08A6.26 6.26 0 0 0 14.17 9zm-9.67 0H1.8a6.26 6.26 0 0 0 3.94 5.08 12.59 12.59 0 0 1-1.16-4.7l-.03-.38zm1.2-6.58-.12.05a6.26 6.26 0 0 0-3.83 5.03h2.75c.09-1.83.48-3.54 1.06-4.81zm2.25-.42c-.7 0-1.78 2.51-1.94 5.5h3.9c-.15-2.9-1.18-5.34-1.89-5.5h-.07zm2.28.43.03.05a12.95 12.95 0 0 1 1.15 5.02h2.75a6.28 6.28 0 0 0-3.93-5.07z"></path></svg>
 				Nederlands (NL)
@@ -734,7 +738,7 @@
 		</section>
 		<section>
 			<h2>Mobiele navigatie</h2>
-			<button>
+			<button aria-label="Zoeken">
 				<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false"><path d="m20.666 20.666 10 10"></path><path d="m24.0002 12.6668c0 6.2593-5.0741 11.3334-11.3334 11.3334-6.2592 0-11.3333-5.0741-11.3333-11.3334 0-6.2592 5.0741-11.3333 11.3333-11.3333 6.2593 0 11.3334 5.0741 11.3334 11.3333z" fill="none"></path></svg>
 				Ontdekken
 			</button>

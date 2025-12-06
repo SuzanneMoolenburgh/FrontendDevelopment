@@ -20,12 +20,28 @@
 <body>
 	<a href="#maincontent">Ga direct naar inhoud</a>
 	<header>
+
+<!-- Bronnen:
+- https://stackoverflow.com/questions/69335456/responsive-images-via-picture-element-and-media-queries-via-css
+- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements
+- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/picture
+-->
+
 		<a href="index.html" aria-label="Ga naar de startpagina">
 			<picture>
 				<source srcset="images/logo-groot.png" media="(min-width: 950px)">
 				<img src="images/logo-klein.png" alt="Airbnb Logo" height="35">
 			</picture>
 		</a>
+
+<!--Bronnen:
+- https://lottiefiles.com/free-animation/house-6kPsctVAb3
+- https://lottiefiles.com/free-animation/air-balloon-D7slE4qepR
+- https://lottiefiles.com/free-animation/hotel-bell-YCVW7mqJoB
+- https://lottiefiles.com/blog/working-with-lottie-animations/how-to-add-lottie-animation-in-web-page-html
+- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/datalist
+-->
+
 		<nav>
 			<ul>
 				<li>
@@ -62,18 +78,24 @@
 			Begin je zoektocht
 		</button>
 		<form>
-			<label for="waar">Waar</label>
-			<input type="text" id="waar" placeholder="Bestemmingen zoeken">
-			<label for="wanneer">Wanneer</label>
-			<input type="date" id="wanneer">
-			<label for="wie">Wie</label>
-			<input list="gasten-opties" id="wie" name="gasten" placeholder="Gasten toevoegen">
-			<datalist id="gasten-opties">
-				<option value="Volwassenen"></option>
-				<option value="Kinderen"></option>
-				<option value="Baby's"></option>
-				<option value="Huisdieren"></option>
-			</datalist>
+			<label>
+				Waar
+				<input type="text" placeholder="Bestemmingen zoeken">
+			</label>
+			<label>
+				Wanneer
+				<input type="date">
+			</label>
+			<label>
+				Wie
+				<input list="gasten-opties" placeholder="Gasten toevoegen">
+				<datalist id="gasten-opties">
+					<option value="Volwassenen"></option>
+					<option value="Kinderen"></option>
+					<option value="Baby's"></option>
+					<option value="Huisdieren"></option>
+				</datalist>
+			</label>
 			<button aria-label="Verstuur het formulier">
 				<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false"><path d="m20.666 20.666 10 10"></path><path d="m24.0002 12.6668c0 6.2593-5.0741 11.3334-11.3334 11.3334-6.2592 0-11.3333-5.0741-11.3333-11.3334 0-6.2592 5.0741-11.3333 11.3333-11.3333 6.2593 0 11.3334 5.0741 11.3334 11.3333z"></path></svg>
 			</button>
@@ -84,18 +106,10 @@
 		<h1>Startpagina van Airbnb</h1>
 		<section>
 			<h2>Populaire woningen in Parijs</h2>
-			 <div>
-				<a href="#">
-					Populaire woningen in Parijs
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false"><path fill="none" d="m12 4 11.3 11.3a1 1 0 0 1 0 1.4L12 28"></path></svg>
-				</a>
-				<button aria-label="Scroll naar de vorige advertenties">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false"><path fill="none" d="M20 28 8.7 16.7a1 1 0 0 1 0-1.4L20 4"></path></svg>
-				</button>
-				<button aria-label="Scroll naar de volgende advertenties">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false"><path fill="none" d="m12 4 11.3 11.3a1 1 0 0 1 0 1.4L12 28"></path></svg>
-				</button>
-			</div>			
+			<a href="#">
+				Populaire woningen in Parijs
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false"><path fill="none" d="m12 4 11.3 11.3a1 1 0 0 1 0 1.4L12 28"></path></svg>
+			</a>
 			<ul>
 				<li>
 					<a href="listing.html" aria-label="Advertentie voor een kamer in Parijs, beschikbaar van 17 tot en met 19 juli voor €198 voor 2 nachten. De kamer is van een particuliere host en heeft een gemiddelde rating van 4,93 sterren.">
@@ -239,35 +253,163 @@
 				</li>
 			</ul>
 		</section>
+		<section>
+			<h2>Dit weekend beschikbaar in London</h2>
+			<a href="#">
+				Dit weekend beschikbaar in London
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false"><path fill="none" d="m12 4 11.3 11.3a1 1 0 0 1 0 1.4L12 28"></path></svg>
+			</a>
+			<ul>
+				<li>
+					<a href="#" aria-label="Advertentie voor een kamer in Londen, beschikbaar van 6 tot en met 7 december voor €60 per nacht. De kamer is van een particuliere host en heeft een gemiddelde rating van 5,0 sterren.">
+						<h3 aria-hidden="true">Kamer in Londen</h3>
+						<img aria-hidden="true" src="images/london1.png" alt="">
+						<time aria-hidden="true" datetime="2025-12-06">6 - 7 dec</time>
+						<p aria-hidden="true">Particuliere host</p>
+						<p aria-hidden="true">€60 voor 1 nacht</p>
+						<data aria-hidden="true" value="5.0">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false"><path fill-rule="evenodd" d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z"></path></svg>
+							5,0
+						</data>			
+					</a>
+					<button aria-label="Voeg toe aan favorieten">
+						<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false"><path d="m15.9998 28.6668c7.1667-4.8847 14.3334-10.8844 14.3334-18.1088 0-1.84951-.6993-3.69794-2.0988-5.10877-1.3996-1.4098-3.2332-2.11573-5.0679-2.11573-1.8336 0-3.6683.70593-5.0668 2.11573l-2.0999 2.11677-2.0988-2.11677c-1.3995-1.4098-3.2332-2.11573-5.06783-2.11573-1.83364 0-3.66831.70593-5.06683 2.11573-1.39955 1.41083-2.09984 3.25926-2.09984 5.10877 0 7.2244 7.16667 13.2241 14.3333 18.1088z"></path></svg>
+					</button>
+					<figure>
+      					<figcaption>Favoriet van gasten</figcaption>
+    				</figure>
+				</li>
+				<li>
+					<a href="#" aria-label="Advertentie voor een kamer in Luton, beschikbaar van 6 tot en met 7 december voor €68 per nacht. De kamer is van een particuliere host en heeft een gemiddelde rating van 4,94 sterren.">
+						<h3 aria-hidden="true">Kamer in Luton</h3>
+						<img aria-hidden="true" src="images/london2.png" alt="">
+						<time aria-hidden="true" datetime="2025-12-06">6 - 7 dec</time>
+						<p aria-hidden="true">Particuliere host</p>
+						<p aria-hidden="true">€68 voor 1 nacht</p>
+						<data aria-hidden="true" value="4.94">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false"><path fill-rule="evenodd" d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z"></path></svg>
+							4,94
+						</data>			
+					</a>
+					<button aria-label="Voeg toe aan favorieten">
+						<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false"><path d="m15.9998 28.6668c7.1667-4.8847 14.3334-10.8844 14.3334-18.1088 0-1.84951-.6993-3.69794-2.0988-5.10877-1.3996-1.4098-3.2332-2.11573-5.0679-2.11573-1.8336 0-3.6683.70593-5.0668 2.11573l-2.0999 2.11677-2.0988-2.11677c-1.3995-1.4098-3.2332-2.11573-5.06783-2.11573-1.83364 0-3.66831.70593-5.06683 2.11573-1.39955 1.41083-2.09984 3.25926-2.09984 5.10877 0 7.2244 7.16667 13.2241 14.3333 18.1088z"></path></svg>
+					</button>
+					<figure>
+      					<figcaption>Favoriet van gasten</figcaption>
+    				</figure>
+				</li>
+				<li>
+					<a href="#" aria-label="Advertentie voor een kamer in Londen, beschikbaar van 6 tot en met 7 december voor €60 per nacht. Het appartement is van een particuliere host en heeft een gemiddelde rating van 4,96 sterren.">
+						<h3 aria-hidden="true">Kamer in Londen</h3>
+						<img aria-hidden="true" src="images/london3.png" alt="">
+						<time aria-hidden="true" datetime="2025-12-06">6 - 7 dec</time>
+						<p aria-hidden="true">Particuliere host</p>
+						<p aria-hidden="true">€60 voor 1 nacht</p>
+						<data aria-hidden="true" value="4.96">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false"><path fill-rule="evenodd" d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z"></path></svg>
+							4,96
+						</data>
+					</a>
+					<button aria-label="Voeg toe aan favorieten">
+						<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false"><path d="m15.9998 28.6668c7.1667-4.8847 14.3334-10.8844 14.3334-18.1088 0-1.84951-.6993-3.69794-2.0988-5.10877-1.3996-1.4098-3.2332-2.11573-5.0679-2.11573-1.8336 0-3.6683.70593-5.0668 2.11573l-2.0999 2.11677-2.0988-2.11677c-1.3995-1.4098-3.2332-2.11573-5.06783-2.11573-1.83364 0-3.66831.70593-5.06683 2.11573-1.39955 1.41083-2.09984 3.25926-2.09984 5.10877 0 7.2244 7.16667 13.2241 14.3333 18.1088z"></path></svg>
+					</button>
+					<figure>
+      					<figcaption>Favoriet van gasten</figcaption>
+    				</figure>
+				</li>
+				<li>
+					<a href="#" aria-label="Advertentie voor een kamer in Luton, beschikbaar van 6 tot en met 7 december voor €45 per nacht. De kamer is van een zakelijke host en heeft een gemiddelde rating van 4,85 sterren.">
+						<h3 aria-hidden="true">Kamer in Luton</h3>
+						<img aria-hidden="true" src="images/london4.png" alt="">
+						<time aria-hidden="true" datetime="2025-12-06">6 - 7 dec</time>
+						<p aria-hidden="true">Zakelijke host</p>
+						<p aria-hidden="true">€45 voor 1 nacht</p>
+						<data aria-hidden="true" value="4.85">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false"><path fill-rule="evenodd" d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z"></path></svg>
+							4,85
+						</data>
+					</a>
+					<button aria-label="Voeg toe aan favorieten">
+						<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false"><path d="m15.9998 28.6668c7.1667-4.8847 14.3334-10.8844 14.3334-18.1088 0-1.84951-.6993-3.69794-2.0988-5.10877-1.3996-1.4098-3.2332-2.11573-5.0679-2.11573-1.8336 0-3.6683.70593-5.0668 2.11573l-2.0999 2.11677-2.0988-2.11677c-1.3995-1.4098-3.2332-2.11573-5.06783-2.11573-1.83364 0-3.66831.70593-5.06683 2.11573-1.39955 1.41083-2.09984 3.25926-2.09984 5.10877 0 7.2244 7.16667 13.2241 14.3333 18.1088z"></path></svg>
+					</button>
+				</li>
+				<li>
+					<a href="#" aria-label="Advertentie voor een appartement in Londen, beschikbaar van 6 tot en met 7 december voor €145 per nacht. Het hotel is van een particuliere host en heeft een gemiddelde rating van 5,0 sterren.">
+						<h3 aria-hidden="true">Appartement in Londen</h3>
+						<img aria-hidden="true" src="images/london5.png" alt="">
+						<time aria-hidden="true" datetime="2025-12-06">6 - 7 dec</time>
+						<p aria-hidden="true">Particuliere host</p>
+						<p aria-hidden="true">€145 voor 1 nacht</p>
+						<data aria-hidden="true" value="5.0">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false"><path fill-rule="evenodd" d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z"></path></svg>
+							5,0
+						</data>
+					</a>
+					<button aria-label="Voeg toe aan favorieten">
+						<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false"><path d="m15.9998 28.6668c7.1667-4.8847 14.3334-10.8844 14.3334-18.1088 0-1.84951-.6993-3.69794-2.0988-5.10877-1.3996-1.4098-3.2332-2.11573-5.0679-2.11573-1.8336 0-3.6683.70593-5.0668 2.11573l-2.0999 2.11677-2.0988-2.11677c-1.3995-1.4098-3.2332-2.11573-5.06783-2.11573-1.83364 0-3.66831.70593-5.06683 2.11573-1.39955 1.41083-2.09984 3.25926-2.09984 5.10877 0 7.2244 7.16667 13.2241 14.3333 18.1088z"></path></svg>
+					</button>
+				</li>
+				<li>
+					<a href="#" aria-label="Advertentie voor een houten huisje in Hertfordshire, beschikbaar van 6 tot en met 7 december voor €197 per nacht. Het appartement is van een particuliere host en heeft een gemiddelde rating van 4,9 sterren.">
+						<h3 aria-hidden="true">Houten huisje in Hertfordshire</h3>
+						<img aria-hidden="true" src="images/london6.png" alt="">
+						<time aria-hidden="true" datetime="2025-12-06">6 - 7 dec</time>
+						<p aria-hidden="true">Particuliere host</p>
+						<p aria-hidden="true">€197 voor 1 nacht</p>
+						<data aria-hidden="true" value="4.9">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false"><path fill-rule="evenodd" d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z"></path></svg>
+							4,9
+						</data>
+					</a>
+					<button aria-label="Voeg toe aan favorieten">
+						<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false"><path d="m15.9998 28.6668c7.1667-4.8847 14.3334-10.8844 14.3334-18.1088 0-1.84951-.6993-3.69794-2.0988-5.10877-1.3996-1.4098-3.2332-2.11573-5.0679-2.11573-1.8336 0-3.6683.70593-5.0668 2.11573l-2.0999 2.11677-2.0988-2.11677c-1.3995-1.4098-3.2332-2.11573-5.06783-2.11573-1.83364 0-3.66831.70593-5.06683 2.11573-1.39955 1.41083-2.09984 3.25926-2.09984 5.10877 0 7.2244 7.16667 13.2241 14.3333 18.1088z"></path></svg>
+					</button>
+					<figure>
+      					<figcaption>Favoriet van gasten</figcaption>
+    				</figure>
+				</li>
+				<li>
+					<a href="#" aria-label="Advertentie voor een kamer in Londen, beschikbaar van 6 tot en met 7 december voor €66 per nacht. De kamer is van een particuliere host en heeft een gemiddelde rating van 4,92 sterren.">
+						<h3 aria-hidden="true">Kamer in Londen</h3>
+						<img aria-hidden="true" src="images/london7.png" alt="">
+						<time aria-hidden="true" datetime="2025-12-06">6 - 7 dec</time>
+						<p aria-hidden="true">Particuliere host</p>
+						<p aria-hidden="true">€66 voor 1 nacht</p>
+						<data aria-hidden="true" value="4.92">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false"><path fill-rule="evenodd" d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z"></path></svg>
+							4,92
+						</data>
+					</a>
+					<button aria-label="Voeg toe aan favorieten">
+						<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false"><path d="m15.9998 28.6668c7.1667-4.8847 14.3334-10.8844 14.3334-18.1088 0-1.84951-.6993-3.69794-2.0988-5.10877-1.3996-1.4098-3.2332-2.11573-5.0679-2.11573-1.8336 0-3.6683.70593-5.0668 2.11573l-2.0999 2.11677-2.0988-2.11677c-1.3995-1.4098-3.2332-2.11573-5.06783-2.11573-1.83364 0-3.66831.70593-5.06683 2.11573-1.39955 1.41083-2.09984 3.25926-2.09984 5.10877 0 7.2244 7.16667 13.2241 14.3333 18.1088z"></path></svg>
+					</button>
+					<figure>
+      					<figcaption>Favoriet van gasten</figcaption>
+    				</figure>
+				</li>
+				<li>
+					<a href="#" aria-label="Advertentie voor een kamer in Luton, beschikbaar van 6 tot en met 7 december voor €74 per nacht. Het appartement is van een zakelijke host en heeft een gemiddelde rating van 4,75 sterren.">
+						<h3 aria-hidden="true">Kamer in Luton</h3>
+						<img aria-hidden="true" src="images/london8.png" alt="">
+						<time aria-hidden="true" datetime="2025-12-06">6 - 7 dec</time>
+						<p aria-hidden="true">Zakelijke host</p>
+						<p aria-hidden="true">€74 voor 1 nacht</p>
+						<data aria-hidden="true" value="4.75">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false"><path fill-rule="evenodd" d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z"></path></svg>
+							4,75
+						</data>
+					</a>
+					<button aria-label="Voeg toe aan favorieten">
+						<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false"><path d="m15.9998 28.6668c7.1667-4.8847 14.3334-10.8844 14.3334-18.1088 0-1.84951-.6993-3.69794-2.0988-5.10877-1.3996-1.4098-3.2332-2.11573-5.0679-2.11573-1.8336 0-3.6683.70593-5.0668 2.11573l-2.0999 2.11677-2.0988-2.11677c-1.3995-1.4098-3.2332-2.11573-5.06783-2.11573-1.83364 0-3.66831.70593-5.06683 2.11573-1.39955 1.41083-2.09984 3.25926-2.09984 5.10877 0 7.2244 7.16667 13.2241 14.3333 18.1088z"></path></svg>
+					</button>
+				</li>
+			</ul>
+		</section>
 	</main>
 
 	<footer>
 		<section>
 			<h2>Inspiratie voor toekomstige uitstapjes</h2>
-			<div>
-				<nav>
-					<ul>
-						<li>
-							<a href="#populair">Populair</a>
-						</li>
-						<li>
-							<a href="#kunst-en-cultuur">Kunst en Cultuur</a>
-						</li>	
-						<li>
-							<a href="#strand">Strand</a>
-						</li>
-						<li>
-							<a href="#bergen">Bergen</a>
-						</li>
-					</ul>
-				</nav>
-				<button aria-label="Ga terug">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-label="tabbladen achteruit scrollen" role="img" focusable="false"><path fill="none" d="M20 28 8.7 16.7a1 1 0 0 1 0-1.4L20 4"></path></svg>
-				</button>
-				<button aria-label="Volgende">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-label="tabbladen vooruit scrollen" role="img" focusable="false"><path fill="none" d="m12 4 11.3 11.3a1 1 0 0 1 0 1.4L12 28"></path></svg>
-				</button>
-			</div>
     		<ul id = "populair">
         		<li>
             		<h3>San Antonio</h3>
@@ -428,142 +570,153 @@
 					</details>
 				</li>
 			</ul>
+			<nav>
+				<ul>
+					<li>
+						<a href="#populair">Populair</a>
+					</li>
+					<li>
+						<a href="#kunst-en-cultuur">Kunst en Cultuur</a>
+					</li>	
+					<li>
+						<a href="#strand">Strand</a>
+					</li>
+					<li>
+						<a href="#bergen">Bergen</a>
+					</li>
+				</ul>
+			</nav>
 		</section>
-		<div>
-			<section>
-				<h3>Support</h3>
-					<nav>
-						<ul>
-							<li>
-								<a href="#">
-									Helpcentrum
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									Hulp bij een veiligheidsprobleem
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									Aircover
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									Antidiscriminatie
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									Hulp voor mensen met beperking
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									Annuleringsmogelijkheden
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									Problemen in de buurt melden
-								</a>
-							</li>
-						</ul>
-					</nav>
-			</section>
-			<section>
-				<h3>Hosten</h3>
-					<nav>
-						<ul>
-							<li>
-								<a href="#">
-									Je woning op Airbnb zetten
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									Jouw activiteit op Airbnb
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									Jouw service op Airbnb
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									AirCover voor hosts
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									Informatie voor hosts
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									Communityforum
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									Verantwoord verhuren
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									Gratis training over verhuren
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									Co-host zoeken
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									Een host doorverwijzen
-								</a>
-							</li>
-						</ul>
-					</nav>
-			</section>
-			<section>
-				<h3>Airbnb</h3>
-					<nav>
-						<ul>
-							<li>
-								<a href="#">
-									Airbnb 2025: Nieuw deze zomer
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									Redactie
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									Vacatures
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									Investeerders
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									Noodonderdak via Airbnb.org
-								</a>
-							</li>
-						</ul>
-					</nav>
-			</section>
-		</div>
 		<section>
-			<h3>Instellingen & over ons</h3>
+			<h2>Footer links</h2>
+			<nav>
+				<h3>Support</h3>
+				<ul>
+					<li>
+						<a href="#">
+							Helpcentrum
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Hulp bij een veiligheidsprobleem
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Aircover
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Antidiscriminatie
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Hulp voor mensen met beperking
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Annuleringsmogelijkheden
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Problemen in de buurt melden
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<nav>
+				<h3>Hosten</h3>
+				<ul>
+					<li>
+						<a href="#">
+							Je woning op Airbnb zetten
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Jouw activiteit op Airbnb
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Jouw service op Airbnb
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							AirCover voor hosts
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Informatie voor hosts
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Communityforum
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Verantwoord verhuren
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Gratis training over verhuren
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Co-host zoeken
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Een host doorverwijzen
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<nav>
+				<h3>Airbnb</h3>
+				<ul>
+					<li>
+						<a href="#">
+							Airbnb 2025: Nieuw deze zomer
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Redactie
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Vacatures
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Investeerders
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Noodonderdak via Airbnb.org
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</section>
+		<section>
+			<h2>Instellingen & over ons</h2>
 			<button aria-label="Verander de taal">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true" role="presentation" focusable="false"><path d="M8 .25a7.77 7.77 0 0 1 7.75 7.78 7.75 7.75 0 0 1-7.52 7.72h-.25A7.75 7.75 0 0 1 .25 8.24v-.25A7.75 7.75 0 0 1 8 .25zm1.95 8.5h-3.9c.15 2.9 1.17 5.34 1.88 5.5H8c.68 0 1.72-2.37 1.93-5.23zm4.26 0h-2.76c-.09 1.96-.53 3.78-1.18 5.08A6.26 6.26 0 0 0 14.17 9zm-9.67 0H1.8a6.26 6.26 0 0 0 3.94 5.08 12.59 12.59 0 0 1-1.16-4.7l-.03-.38zm1.2-6.58-.12.05a6.26 6.26 0 0 0-3.83 5.03h2.75c.09-1.83.48-3.54 1.06-4.81zm2.25-.42c-.7 0-1.78 2.51-1.94 5.5h3.9c-.15-2.9-1.18-5.34-1.89-5.5h-.07zm2.28.43.03.05a12.95 12.95 0 0 1 1.15 5.02h2.75a6.28 6.28 0 0 0-3.93-5.07z"></path></svg>
 				Nederlands (NL)
@@ -630,11 +783,3 @@
 </body>
 	
 </html>
-
-<!--Bronnen:
-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/picture
-- https://lottiefiles.com/free-animation/house-6kPsctVAb3
-- https://lottiefiles.com/free-animation/air-balloon-D7slE4qepR
-- https://lottiefiles.com/free-animation/hotel-bell-YCVW7mqJoB
-- https://lottiefiles.com/blog/working-with-lottie-animations/how-to-add-lottie-animation-in-web-page-html
--->

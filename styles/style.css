@@ -18,31 +18,7 @@
 @font-face { 
   font-family: Airbnb;
   src: url(../fonts/AirbnbCerealVF.woff2);
-  font-weight: 300;
-}
-
-@font-face { 
-  font-family: Airbnb;
-  src: url(../fonts/AirbnbCerealVF.woff2);
-  font-weight: 400;
-}
-
-@font-face { 
-  font-family: Airbnb;
-  src: url(../fonts/AirbnbCerealVF.woff2);
-  font-weight: 500;
-}
-
-@font-face { 
-  font-family: Airbnb;
-  src: url(../fonts/AirbnbCerealVF.woff2);
-  font-weight: 600;
-}
-
-@font-face { 
-  font-family: Airbnb;
-  src: url(../fonts/AirbnbCerealVF.woff2);
-  font-weight: 700;
+  font-weight: 300 700;
 }
 
 :root {
@@ -53,16 +29,20 @@
   --color-accent-hover:#c22a46;
   --color-accent-active:#931d33;
   --color-icon: #f2f2f2;
+  --color-disabled: #dfdfdf;
   --color-hover: #ebebeb;
   --color-active: #cbcbcb;
   --color-header: #ffffff;
   --color-header-gradient: #f8f8f8;
   --color-shadow: #00000033;
   --color-text: #6a6a6a;
-  --color-heart: rgba(0, 0, 0, 0.5);
   --color-selected: #000000;
   --color-details: #dddddd;
   --color-transparant: rgba(255, 255, 255, 0);
+  --color-button-gradient: #d80666;
+  --color-white-static: #ffffff;
+  --color-output-static: rgba(0, 0, 0, 0.482);
+  --color-heart-static: rgba(0, 0, 0, 0.5);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -70,19 +50,38 @@
     --color-background: #181818;
     --color-footer: #1e1e1e;
     --color-svg: #e0e0e0;
-    --color-accent: #ff385c;
     --color-icon: #363636;
+    --color-disabled: #4d4d4d;
     --color-hover: #2c2c2c;
-    --color-accent-hover:#c22a46;
-    --color-accent-active:#931d33;
     --color-active: #171717;
     --color-header: #1e1e1e;
     --color-header-gradient: #1a1a1a;
     --color-shadow: #31313199;
     --color-text: #dcdcdc;
-    --color-heart: rgba(255, 255, 255, 0.5);
     --color-selected: #ffffff;
     --color-details: #444444;
+    --color-transparant: rgba(0, 0, 0, 0);
+  }  
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --color-background: #000000;
+    --color-footer: #000000;
+    --color-svg: #ffffff;
+    --color-accent: #ff0033;
+    --color-accent-hover: #cc0029;
+    --color-accent-active: #990020;
+    --color-icon: #2e2e2e;
+    --color-disabled: #555555;
+    --color-hover: #222222;
+    --color-active: #444444;
+    --color-header: #000000;
+    --color-header-gradient: #000000;
+    --color-shadow: #ffffff33;
+    --color-text: #ffffff;
+    --color-selected: #ffffff;
+    --color-details: #ffffff;
     --color-transparant: rgba(0, 0, 0, 0);
   }
 }
@@ -102,14 +101,9 @@
 /*  SKIP LINKS  */
 /****************/
 
-/* Bron:
-- https://www.accessibility.nl/kennis/zo-zet-je-skiplinks-voor-een-optimale-navigatie
-*/
-
 body > a {
   position: absolute;
   top: -40px;
-  left: 0;
   background: var(--color-selected);
   color: var(--color-background);
   padding: 0.5em 1em;
@@ -131,9 +125,9 @@ body > a:focus {
 
 
 
-/****************/
-/*    HEADER    */
-/****************/
+/*************************/
+/*    HEADER (MOBIEL)    */
+/*************************/
 
 body {
   font-family: Airbnb, sans-serif;
@@ -151,6 +145,8 @@ header {
   top: 0;
   z-index: 2;
 }
+
+/* Iconen */
 
 header ul {
   grid-row: 2;
@@ -170,10 +166,6 @@ header li a {
   font-size: 0.75em;
 }
 
-header li a > p {
-  transition: transform 0.3s ease;
-}
-
 header li:nth-of-type(1) > a > p {
   color: var(--color-svg);
   font-weight: 600;
@@ -183,16 +175,15 @@ header li:nth-of-type(1) > a > p {
 
 header li a lottie-player {
   height: 4em;
-  transition: height 0.2s ease;
-  transition: transform 0.2s ease;
+  transition: height 0.2s ease, transform 0.2s ease;
 }
 
 lottie-player:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 lottie-player:active {
-    border: 0.1em solid var(--color-selected);
+  border: 0.1em solid var(--color-selected);
 }
 
 header li:not(:nth-of-type(1)) > a {
@@ -202,10 +193,11 @@ header li:not(:nth-of-type(1)) > a {
   padding-bottom: 0.2em;
 }
 
+/* Zoekknop */
+
 header > button:nth-of-type(4) {
   grid-row: 1;
   justify-self: center;
-  align-self: end;
   background-color: var(--color-background);
   color: var(--color-selected);
   padding: 1.4em;
@@ -220,10 +212,8 @@ header > button:nth-of-type(4) {
   gap: 0.7em;
   width: 87%;
   height: 3.5em;
-  min-width: 10em;
   margin-top: 1em;
-  transition: border 0.2s ease;
-  transition: background-color 0.2s ease;
+  transition: border 0.2s ease, background-color 0.2s ease;
 }
 
 header > button:nth-of-type(4):hover {
@@ -241,6 +231,8 @@ header > button:nth-of-type(4) svg {
   fill: var(--color-svg);
   align-self: center;
 }
+
+/* Elementen groot scherm / Javascript */
 
 header > a, header > button:not(:last-of-type), header > form {
   display: none;
@@ -261,14 +253,43 @@ header.scroll li a lottie-player {
 @media (min-width: 46.5em) {
   header {
     grid-template-columns: min-content 1fr repeat(3, min-content);
-    grid-template-rows: 5em 1fr;
-    padding: 0.4em 3em 2.8em 3em;
-    gap: 0.5em 1em;
-    height: auto;
+    padding: 0.9em 3em 2.6em 3em;
+    gap: 1.5em 1em;
     transition: padding 0.2s ease;
   }
 
+/* Logo */
+
+  header > a {
+    display: block;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+/* Iconen */
+
+  header nav {
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    transform: translateY(0);
+    opacity: 1;
+    grid-column: 1 / 6;
+    grid-row: 1;
+  }
+
+  header ul {
+    justify-content: center;
+    gap: 2em;
+    width: auto;
+    margin-bottom: 0em;
+  }
+
   header li a {
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    height: 3.7em; 
+    gap: 0.2em;
+    font-size: 0.9em;
     border-bottom: 0.25em solid var(--color-selected);
     padding-bottom: 0.2em;
   }
@@ -277,33 +298,14 @@ header.scroll li a lottie-player {
     border-bottom: none;
   }
 
-  header nav {
-    transition: transform 0.2s ease, opacity 0.2s ease;
-    transform: translateY(0);
-    opacity: 1;
-  }
-
-  header > a {
-    display: block;
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  header picture {
-    width: 2.2em;
-    height: 2.2em;
-  }
+/* Zoekbalk */
 
   header > form {
     display: grid;
     grid-template-columns: repeat(3, minmax(3em, 1fr));
     column-gap: 1.5em;
-    grid-row: 2;
     grid-column: 1 / 6;
     justify-self: center;
-    align-self: start;
-    justify-content: space-between;
-    align-items: center;
     background-color: var(--color-background);
     border: 0.125em solid transparent;
     border-radius: 10em;
@@ -317,26 +319,27 @@ header.scroll li a lottie-player {
 
   header > form label {
     grid-row: 1;
-    align-self: end;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    align-self: center;
     color: var(--color-selected);
   }
 
   header > form input {
-    grid-row: 2;
-    align-self: center;
     border: none;
     font-size: 1.2em;
     color: var(--color-text);
     background-color: var(--color-background);
-    min-width: 3em;
+    width: 70%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
-  /* Bron:
-  - https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::placeholder
-  */
+/* Bron:
+- https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::placeholder
+*/
 
   header > form input::placeholder {
     color: var(--color-selected);
@@ -359,16 +362,16 @@ header.scroll li a lottie-player {
     fill: none;
     height: 1.2em;
     width: 1.2em;
-    stroke: white;
+    stroke: var(--color-white-static);
     stroke-width: 4;
     overflow: visible;
     transition: width 0.2s ease, height 0.2s ease;
   }
 
   header > form button {
+    grid-row: 1;
     justify-self: end;
     grid-column: 3;
-    grid-row: 1 / 3;
     background-color: var(--color-accent);
     border: none;
     border-radius: 100%;
@@ -377,8 +380,7 @@ header.scroll li a lottie-player {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: width 0.2s ease, height 0.2s ease;
-    transition: background-color 0.2s ease;
+    transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
   }
 
   header > form button:hover {
@@ -388,6 +390,8 @@ header.scroll li a lottie-player {
   header > form button:active {
     background-color: var(--color-accent-active);
   }
+
+/* Knoppen */
 
   header > button:nth-of-type(2) {
     grid-column: 4;
@@ -437,29 +441,10 @@ header.scroll li a lottie-player {
     background-color: var(--color-active);
   }
 
-  header nav {
-    grid-column: 1 / 6;
-    grid-row: 1;
-  }
-
-  header ul {
-    justify-content: center;
-    gap: 2em;
-    width: auto;
-    margin-bottom: 0em;
-  }
-
-  header li a {
-    flex-direction: row;
-    align-items: center;
-    width: auto;
-    height: 3.7em; 
-    gap: 0.2em;
-    font-size: 0.9em;
-  }
+/* Javascript */
 
   header.scroll {
-    padding: 0.4em 3em 0em 3em;
+    padding: 1.5em 3em 0em 3em;
   }
 
   header.scroll nav {
@@ -487,6 +472,8 @@ header.scroll li a lottie-player {
   }
 
 }
+
+/* 'Host worden' knop */
 
 @media (min-width: 70.4375em) {
   header > button:nth-of-type(1) {
@@ -517,17 +504,7 @@ header.scroll li a lottie-player {
 
 }
 
-/* @media (orientation: landscape) and (max-height: 20em) {
-  header {
-    position: relative;
-  }
 
-  header.scroll li a lottie-player {
-    height: 4em;
-    transform: none;
-  }
-
-} */
 
 
 
@@ -539,7 +516,7 @@ html {
   scroll-behavior: smooth;
 }
 
-footer section:last-of-type h2 {
+footer section:nth-of-type(2) h2, footer section:last-of-type h2 {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
     height: 1px;
@@ -554,8 +531,10 @@ footer {
   padding-bottom: 5em;
 }
 
+/* Tabbladen */
+
 footer > section:nth-of-type(1) {
-  padding: 3em 1em;
+  padding: 3em 1.3em;
   display: grid;
   grid-template-rows: min-content repeat(2, auto);
   gap: 1em;
@@ -567,12 +546,7 @@ footer > section:nth-of-type(1) h2 {
   font-weight: 500;
   color: var(--color-svg);
   grid-row: 1;
-}
-
-footer > section:nth-of-type(1) div {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
+  margin-bottom: 1em;
 }
 
 footer > section:nth-of-type(1) nav {
@@ -583,6 +557,51 @@ footer > section:nth-of-type(1) nav {
   overscroll-behavior-x: contain;
   scrollbar-width: none;
   border-bottom: 0.1em solid var(--color-details);
+  anchor-name: --carousel-footer;
+}
+
+footer > section:nth-of-type(1) nav::scroll-button(*) {
+  position: fixed;
+  position-anchor: --carousel-footer;
+  position-visibility: always;
+  position-area: block-start center;
+  background-color: var(--color-transparant);
+  background-size: 0.9em;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  margin-bottom: 0.3em;
+  width: 2em;
+  height: 2em;
+  transition: background-color 0.2s ease;
+}
+
+footer > section:nth-of-type(1) nav::scroll-button(*):hover {
+  background-color: var(--color-hover);
+}
+
+footer > section:nth-of-type(1) nav::scroll-button(*):active {
+  background-color: var(--color-active);
+}
+
+footer > section:nth-of-type(1) nav::scroll-button(right) {
+  content: '' / 'Volgende';
+  background-image: url(../images/scroll-volgende-lm.svg);
+  justify-self: end;
+}
+
+footer > section:nth-of-type(1) nav::scroll-button(left) {
+  content: '' / 'Vorige';
+  background-image: url(../images/scroll-vorige-lm.svg);
+  justify-self: start;
+}
+
+footer > section:nth-of-type(1) nav::scroll-button(right):disabled {
+  background-image: url(../images/scroll-volgende-disabled.svg);
+}
+
+footer > section:nth-of-type(1) nav::scroll-button(left):disabled {
+  background-image: url(../images/scroll-vorige-disabled.svg);
 }
 
 footer > section:nth-of-type(1) nav ul {
@@ -602,9 +621,9 @@ footer > section:nth-of-type(1) nav a {
   text-decoration: none;
 }
 
-footer > section:nth-of-type(1) nav a.selected {
+footer > section:nth-of-type(1):has(#populair:target) nav a[href="#populair"], footer > section:nth-of-type(1):has(#kunst-en-cultuur:target) nav a[href="#kunst-en-cultuur"],
+footer > section:nth-of-type(1):has(#strand:target) nav a[href="#strand"], footer > section:nth-of-type(1):has(#bergen:target) nav a[href="#bergen"] {
   border-bottom: 0.2em solid var(--color-selected);
-  padding-bottom: 0.8em;
   color: var(--color-svg);
 }
 
@@ -675,65 +694,38 @@ footer summary svg {
   overflow: visible;
 }
 
-footer > section:nth-of-type(1) button {
-  border: none;
-  background: var(--color-footer);
-  width: 1.4em;
-  height: 1.4em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
-}
+/* Links */
 
-footer > section:nth-of-type(1) button:nth-of-type(1) {
-  left: 0em;
-}
-
-footer > section:nth-of-type(1) button:nth-of-type(2) {
-  right: 0em;
-}
-
-footer > section:nth-of-type(1) button svg {
-  display: block;
-  fill: none;
-  height: 1.2em;
-  width: 1.2em;
-  stroke: var(--color-svg);
-  stroke-width: 3;
-  overflow: visible;
-}
-
-footer > div {
-  display:grid;
+footer > section:nth-of-type(2) {
+  display:flex;
+  flex-direction: column;
   gap: 2em;
   padding: 0em 1.3em;
 }
 
-footer > div ul {
+footer > section:nth-of-type(2) ul {
   list-style: none;
   display: grid;
   gap: 1em;
   padding: 1em 0em;
 }
 
-footer > div a, footer > section:nth-of-type(2) nav:last-of-type a, footer > section:nth-of-type(2) p {
+footer a {
   font-size: 0.9em;
   font-weight: 400;
   color: var(--color-svg);
   text-decoration: none;
 }
 
-footer > div section h3 {
+footer > section:nth-of-type(2) h3 {
   font-size: 0.9em;
   font-weight: 500;
   color: var(--color-svg);
 }
 
-footer > section:nth-of-type(2) {
+/* Instellingen / Social media / Bedrijfsgegevens */
+
+footer > section:nth-of-type(3) {
   display:grid;
   grid-template-rows: repeat(4, min-content);
   grid-template-columns: min-content auto;
@@ -741,7 +733,7 @@ footer > section:nth-of-type(2) {
   padding: 2em 1.3em;
 }
 
-footer > section:nth-of-type(2) h3 {
+footer > section:nth-of-type(3) h2 {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
@@ -751,41 +743,37 @@ footer > section:nth-of-type(2) h3 {
   width: 1px;
 }
 
-footer > section:nth-of-type(2) ul {
+footer > section:nth-of-type(3) ul {
   list-style: none;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-footer > section:nth-of-type(2) nav li {
+footer > section:nth-of-type(3) nav li {
   padding-right: 1.5em;
 }
 
-footer > section:nth-of-type(2) button svg {
+footer > section:nth-of-type(3) button svg, footer > section:nth-of-type(3) a svg {
   display: block;
   height: 1.2em;
   width: 1.2em;
   fill: var(--color-svg);
 }
 
-footer > section:nth-of-type(2) a svg {
-  display: block;
-  height: 1em;
-  width: 1em;
-  fill: var(--color-svg);
+footer > section:nth-of-type(3) a svg {
   transition: fill 0.2s ease;
 }
 
-footer > section:nth-of-type(2) a svg:hover {
+footer > section:nth-of-type(3) a svg:hover {
   fill: var(--color-accent);
 }
 
-footer > section:nth-of-type(2) a svg:active {
+footer > section:nth-of-type(3) a svg:active {
   fill: var(--color-accent-active);;
 }
 
-footer > section:nth-of-type(2) button {
+footer > section:nth-of-type(3) button {
   display:flex;
   flex-direction: row;
   align-items: center;
@@ -799,33 +787,34 @@ footer > section:nth-of-type(2) button {
   transition: color 0.2s ease;
 }
 
-footer > section:nth-of-type(2) button:hover {
+footer > section:nth-of-type(3) button:hover {
   color: var(--color-accent);
 }
 
-footer > section:nth-of-type(2) button:active {
+footer > section:nth-of-type(3) button:active {
   color: var(--color-accent-active);
 }
 
-footer > section:nth-of-type(2) button:nth-of-type(1) {
+footer > section:nth-of-type(3) button:nth-of-type(1) {
   grid-column: 1;
   justify-self: start;
 }
 
-footer > section:nth-of-type(2) button:nth-of-type(2) {
+footer > section:nth-of-type(3) button:nth-of-type(2) {
   grid-column: 2;
   justify-self: start;
 }
 
-footer > section:nth-of-type(2) nav:nth-of-type(1) {
+footer > section:nth-of-type(3) nav:nth-of-type(1) {
   grid-column: 1 / 3;
 }
 
-footer > section:nth-of-type(2) p {
+footer > section:nth-of-type(3) p {
   grid-column: 1 / 3;
+  color: var(--color-selected);
 }
 
-footer > section:nth-of-type(2) nav:nth-of-type(2) {
+footer > section:nth-of-type(3) nav:nth-of-type(2) {
   grid-column: 1 / 3;
   margin-top: -1em;
 }
@@ -838,61 +827,57 @@ footer > section:nth-of-type(2) nav:nth-of-type(2) {
 /*  FOOTER: MQ  */
 /****************/
 
-@media (min-width: 26.25em) {
-  footer > section:nth-of-type(1) button svg {
-    display: none;
-  }
-}
-
 @media (min-width: 46.5em) {
-  footer > div {
+  footer > section:nth-of-type(2) {
+    display:grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
   }
 
-   footer > section:nth-of-type(2) {
+   footer > section:nth-of-type(3) {
     grid-template-columns: repeat(2, min-content) auto;
     align-items: center;
   }
 
-  footer > section:nth-of-type(2) nav:nth-of-type(1) {
+  footer > section:nth-of-type(3) nav:nth-of-type(1) {
     grid-column: 3;
     justify-self: end;
   }
 }
 
 @media (min-width: 59.375em) {
-  footer > section:nth-of-type(2) {
+  footer > section:nth-of-type(3) {
     grid-template-columns: max-content 1fr repeat(3, max-content);
     grid-template-rows: min-content;
     align-items: center;
   }
 
-  footer > section:nth-of-type(2) p {
+  footer > section:nth-of-type(3) p {
     grid-row: 1;
     grid-column: 1;
     justify-self: start;
   }
 
-  footer > section:nth-of-type(2) nav:nth-of-type(2) {
+  footer > section:nth-of-type(3) nav:nth-of-type(2) {
     grid-row: 1;
     grid-column: 2;
     justify-self: start;
     margin-top: 0;
   }
 
-  footer > section:nth-of-type(2) button:nth-of-type(1) {
+  footer > section:nth-of-type(3) button:nth-of-type(1) {
     grid-row: 1;
     grid-column: 3;
     justify-self: end;
   }
 
-  footer > section:nth-of-type(2) button:nth-of-type(2) {
+  footer > section:nth-of-type(3) button:nth-of-type(2) {
     grid-row: 1;
     grid-column: 4;
     justify-self: end;
   }
 
-  footer > section:nth-of-type(2) nav:nth-of-type(1) {
+  footer > section:nth-of-type(3) nav:nth-of-type(1) {
     grid-row: 1;
     grid-column: 5;
     justify-self: end;
@@ -904,9 +889,28 @@ footer > section:nth-of-type(2) nav:nth-of-type(2) {
       padding: 3em 5.4em;
     }
 
-    footer > div, footer > section:nth-of-type(2) {
+    footer > section:nth-of-type(2), footer > section:nth-of-type(3) {
       padding: 1.8em 2.7em; 
     }
+}
+
+@media (prefers-color-scheme: dark) {
+  footer > section:nth-of-type(1) nav::scroll-button(right) {
+    background-image: url(../images/scroll-volgende-dm.svg);
+  }
+
+  footer > section:nth-of-type(1) nav::scroll-button(left) {
+    background-image: url(../images/scroll-vorige-dm.svg);
+  }
+
+  footer > section:nth-of-type(1) nav::scroll-button(right):disabled {
+    background-image: url(../images/scroll-volgende-disabled-dm.svg);
+  }
+
+  footer > section:nth-of-type(1) nav::scroll-button(left):disabled {
+    background-image: url(../images/scroll-vorige-disabled-dm.svg);
+  }
+
 }
 
 

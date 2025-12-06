@@ -12,7 +12,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 ## Jij
 
-<details open>
+<details>
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Auteur:
@@ -32,7 +32,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 ## Je website
 
-<details open>
+<details>
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
@@ -60,13 +60,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <img src="readme-images/home-headings.png" width="850px" alt="home headings">
   Ook de links zijn duidelijk aangegeven. De namen zijn logisch en geven goed aan waar je als gebruiker naartoe navigeert op het moment dat je erop klikt. Er is ook een 'skip links' aanwezig, zodat gebruikers met een screenreader gelijk naar de inhoud kunnnen navigeren.
   <img src="readme-images/home-links.png" width="850px" alt="home hyperlinks">
-  De kopjes op een advertentie pagina zijn minder duidelijk. Als ik voor het eerst op de site zou komen, zou ik bijvoorbeeld zonder visuele context niet direct weten wat "December 2025" betekent.
-  <img src="readme-images/ad-headings.png" width="850px" alt="advertentie headings">
-  De hyperlinks zijn logisch, zolang je eerst de context van de kopjes hebt. Als je alleen snel door de links zou willen navigeren, zou je waarschijnlijk niet direct weten waar je naartoe zou moeten navigeren.
-  <img src="readme-images/ad-links.png" width="850px" alt="advertentie hyperlinks">
-  Uit de test bleek dat Airbnb op veel vlakken goed heeft nagedacht over toegankelijkheid. Los van de headings hebben ze bijvoorbeeld ook een goede toetsenbordnavigatie, zijn afbeeldingen en kaarten voorzien van alternatieve tekst en is er een goed kleurcontrast. Ook reageert de site op bijvoorbeeld de hoge-contrast modus en tekstvergroting.
-  <img src="readme-images/contrast-home.png" width="850px" alt="startpagina met hoog contrast">
-  Airbnb heeft nog wel kleine verbeterpunten. Zo gebruiken ze bijvoorbeeld veel carrousels en lijsten, maar hiervoor worden div's gebruikt, in plaats van lijst elementen. Ook hebben pagina's geen eigen titel en maakt alleen de startpagina gebruikt van een verborgen h1. Airbnb ondersteunt ook geen dark mode.
+  Uit de test bleek dat Airbnb op veel vlakken goed heeft nagedacht over toegankelijkheid. Los van de headings hebben ze bijvoorbeeld ook een goede toetsenbordnavigatie, zijn afbeeldingen en kaarten voorzien van alt tekst en is er een goed kleurcontrast. Ook reageert de site op tekstvergroting. De site reageert alleen niet op dark mode of hoog contrast.
+  <img src="readme-images/alt-text.png" width="850px" alt="afbeelding met alt tekst">
+  Het andere nog grote verbeterpunt voor Airbnb zijn de html elementen die ze gebruiken. Voor bijna alles wordt een div of span gebruikt. Zo gebruiken ze bijvoorbeeld veel carrousels en lijsten, maar hiervoor worden div's gebruikt, in plaats van lijst elementen.
   <img src="readme-images/geen-ul.png" width="850px" alt="list item aangeduidt met een div">
 
 </details>
@@ -98,8 +94,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Stand van zaken
   In de eerste twee weken ben ik al een eind gekomen. Ik ben vooral bezig geweest met de header, met name het invoegen van animaties en het responsive maken.
   <img src="readme-images/voortgang1-a.png" width="600px" alt="screenshots van een responsive header">
-  Ook ben ik begonnen met het caroussel voor de advertenties. Dit gaat tot nu toe ook goed.
-  <img src="readme-images/voortgang1-b.png" width="500px" alt="screenshot van een advertentie caroussel">
+  Ook ben ik begonnen met het carrousel voor de advertenties. Dit gaat tot nu toe ook goed.
+  <img src="readme-images/voortgang1-b.png" width="500px" alt="screenshot van een advertentie carrousel">
   Ik heb me tijdens de eerste twee weken wel gerealizeerd dat de website die ik heb gekozen moeilijk is dan ik van tevoren had verwacht. De lastigste onderdelen op dit moment waar ik ook nog niet uit ben gekomen zijn de footer en de responsive form zoekbalk.
   <img src="readme-images/voortgang1-c.png" width="600px" alt="screenshots van grootste uitdagingen">
 
@@ -131,7 +127,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   De meeting ging goed, ik heb antwoorden op al mijn vragen gehad dus ik kan nu zeker verder met mijn website. De belangrijkste punten:
 
   - De juiste html elementen voor het maken van mijn form zoekbalk bij een groter scherm.
-  - Het maken van de tabbladen carousel in mijn footer.
+  - Het maken van de tabbladen carrousel in mijn footer.
   - Info warning bij validation voor aria labels
   - Het gebruiken en aanpassen van de kleur van svg iconen
 
@@ -193,7 +189,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+  Uit mijn tweede test bleek dat mijn website verbeterd is ten opzichte van Airbnb. Zo reageert mijn website op zowel dark mode als high contrast.
+  <img src="readme-images/kleur-verschil.png" width="600px" alt="een vergelijking tussen twee sites op gebied van dark mode en high contrast">
+  Ook maak ik gebruik van semantische html elementen, waar Airbnb div'jes gebruikt.
+  <img src="readme-images/html-ad.png" width="600px" alt="een vergelijking tussen twee sites wat betreft de html">
+  Op klein (mobiel en tablet) formaat heb ik op drie plekken scrollknoppen toegevoegd bij carrousels waar je op Airbnb alleen horizontaal kan scrollen. Ook heeft mijn website op meerdere plekken verborgen kopjes, terwijl Airbnb dit alleen voor de h1 op de startpagina heeft.
+  <img src="readme-images/scroll-knoppen.png" width="600px" alt="een vergelijking tussen twee sites op gebied van scrollknoppen">
+  Airbnb scoorde op veel andere onderdelen al goed dus deze heb ik ook allemaal toegevoegd aan mijn website. Bijvoorbeeld aria-labels, skip links, goed formaat op mobiel, focus style (en andere button states), alt teksten en een reduced-motion media query voor mijn header en footer animaties.
+  <img src="readme-images/skip-links.png" width="600px" alt="screenshots van skip links en links met aria labels op mijn website">
 
 </details>
 
@@ -226,6 +229,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   2. Vraag bronvermelding
 
   Romaisa:
+  1. Requirement rood krijgen 
+  2. tekst op de svg
 
   Irem:
 
@@ -237,10 +242,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Mijn aria-labels op mijn advertentie carrousel kaartjes waren goed, dus ik ga nu de komende dagen op dezelfde manier nog aria-labels toevoegen aan de rest van mijn html.
+  - Ook hebben we het bij de meeting nog weer gehad over scroll knoppen. Ik realizeerde me dat ik deze had toegevoegd op plekken waar Airbnb dit ook had, maar nog niet op andere plekken waar er wel horizontaal gescrold wordt, dus dit ga ik de komende dagen ook nog verbeteren.
+  - Goed om ook nog github een extra keer te checken of al mijn bestanden goed worden overgedragen en gelezen.
 
 </details>
 
@@ -278,12 +282,33 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 <details open>
   <summary>continu bijhouden terwijl je werkt</summary>
 
-  Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg). 
-  Nb. ChatGpT en andere AI horen er ook bij.
-  Nb. Vermeld de bronnen ook in je code.
+  HTML:
+  1. https://stackoverflow.com/questions/69335456/responsive-images-via-picture-element-and-media-queries-via-css
+  2. https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements
+    - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/picture
+    - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/datalist
+    - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/output
+  3. https://lottiefiles.com/blog/working-with-lottie-animations/how-to-add-lottie-animation-in-web-page-html
+  4. https://maps.app.goo.gl/bmTcqM7kED8QMavU8
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  CSS:
+  1. https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::placeholder
+  2. https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details
+  3. https://www.a11yproject.com/posts/how-to-hide-content/ (Post via Teams)
+  4. https://chrome.dev/carousel-configurator/
+  5. https://www.digitalocean.com/community/tutorials/css-cropping-images-object-fit
+
+  Javascript:
+  1. https://stackoverflow.com/questions/19158559/how-to-fix-a-header-on-scroll
+  2. https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollY
+  3. https://developer.mozilla.org/en-US/docs/Web/API/Element/scroll
+  4. https://stackoverflow.com/questions/51219064/run-function-only-on-index-html-page-javascript
+
+  Bestanden:
+  1. https://lottiefiles.com/free-animation/house-6kPsctVAb3 (Homes icoon)
+  2. https://lottiefiles.com/free-animation/air-balloon-D7slE4qepR (Experiences icoon)
+  3. https://lottiefiles.com/free-animation/hotel-bell-YCVW7mqJoB (Services icoon)
+  4. https://www.freepik.com/icon/woman_6997662#fromView=keyword&page=1&position=2&uuid=8eed55b1-2946-4182-b7b0-1430b7c773b7 (Vervanging profielfoto host)
+  5. https://icon-icons.com/icon/female-woman-user-people-avatar-white-tone/159354 (Vervanging profielfoto's reviewers)
 
 </details>
