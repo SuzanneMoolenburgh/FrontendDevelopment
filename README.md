@@ -190,13 +190,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Uit mijn tweede test bleek dat mijn website verbeterd is ten opzichte van Airbnb. Zo reageert mijn website op zowel dark mode als high contrast.
-  <img src="readme-images/kleur-verschil.png" width="600px" alt="een vergelijking tussen twee sites op gebied van dark mode en high contrast">
+  <img src="readme-images/kleur-verschil.png" width="850px" alt="een vergelijking tussen twee sites op gebied van dark mode en high contrast">
   Ook maak ik gebruik van semantische html elementen, waar Airbnb div'jes gebruikt.
-  <img src="readme-images/html-ad.png" width="600px" alt="een vergelijking tussen twee sites wat betreft de html">
+  <img src="readme-images/html-ad.png" width="850px" alt="een vergelijking tussen twee sites wat betreft de html">
   Op klein (mobiel en tablet) formaat heb ik op drie plekken scrollknoppen toegevoegd bij carrousels waar je op Airbnb alleen horizontaal kan scrollen. Ook heeft mijn website op meerdere plekken verborgen kopjes, terwijl Airbnb dit alleen voor de h1 op de startpagina heeft.
-  <img src="readme-images/scroll-knoppen.png" width="600px" alt="een vergelijking tussen twee sites op gebied van scrollknoppen">
+  <img src="readme-images/scroll-knoppen.png" width="850px" alt="een vergelijking tussen twee sites op gebied van scrollknoppen">
   Airbnb scoorde op veel andere onderdelen al goed dus deze heb ik ook allemaal toegevoegd aan mijn website. Bijvoorbeeld aria-labels, skip links, goed formaat op mobiel, focus style (en andere button states), alt teksten en een reduced-motion media query voor mijn header en footer animaties.
-  <img src="readme-images/skip-links.png" width="600px" alt="screenshots van skip links en links met aria labels op mijn website">
+  <img src="readme-images/skip-link.png" width="850px" alt="screenshots van skip links en links met aria labels op mijn website">
 
 </details>
 
