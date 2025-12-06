@@ -303,6 +303,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   2. https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollY
   3. https://developer.mozilla.org/en-US/docs/Web/API/Element/scroll
   4. https://stackoverflow.com/questions/51219064/run-function-only-on-index-html-page-javascript
+  5. https://stackoverflow.com/questions/75357525/how-to-check-whether-window-location-pathname-ends-with-search
 
   Bestanden:
   1. https://lottiefiles.com/free-animation/house-6kPsctVAb3 (Homes icoon)

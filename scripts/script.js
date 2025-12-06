@@ -30,9 +30,10 @@ window.addEventListener('scroll', headerScroll);
 /*Bron:
 - https://developer.mozilla.org/en-US/docs/Web/API/Element/scroll
 - https://stackoverflow.com/questions/51219064/run-function-only-on-index-html-page-javascript
+- https://stackoverflow.com/questions/75357525/how-to-check-whether-window-location-pathname-ends-with-search
 */
 
-if (window.location.pathname === '/listing.html') {
+if (window.location.pathname.endsWith('listing.html')) {
   const carrousel = document.querySelector('main > section:nth-of-type(1) div ul');
   const fotos = carrousel.querySelectorAll('li');
   const counter = document.querySelector('main > section:nth-of-type(1) div output');
