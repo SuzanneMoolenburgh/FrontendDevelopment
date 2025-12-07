@@ -264,7 +264,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Dit ging goed/Heb ik geleerd: 
   De afgelopen weken heb ik het meeste geleerd over CSS en dan met name het responsive positioneren van elementen. Voorheen kende ik flex een beetje van vorig jaar, maar verder had ik geen idee hoe ik websites responsive moest maken. Het werken met grid, flex, position en media queries heeft me dan ook erg verrast omdat dit vrij snel goed ging en ik het minder moeilijk vond dan ik had verwacht. Airbnb maakt hier dan ook erg veel gebruik van, dus zeker in de latere weken met mijn tweede pagina ging dit allemaal voor mijn gevoel steeds makkelijker.
 
-  <img src="readme-images/grid-flex.jpg" width="850px" alt="top">
+  <img src="readme-images/grid-flex.png" width="850px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
