@@ -96,7 +96,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <img src="readme-images/voortgang1-a.png" width="600px" alt="screenshots van een responsive header">
   Ook ben ik begonnen met het carrousel voor de advertenties. Dit gaat tot nu toe ook goed.
   <img src="readme-images/voortgang1-b.png" width="500px" alt="screenshot van een advertentie carrousel">
-  Ik heb me tijdens de eerste twee weken wel gerealizeerd dat de website die ik heb gekozen moeilijk is dan ik van tevoren had verwacht. De lastigste onderdelen op dit moment waar ik ook nog niet uit ben gekomen zijn de footer en de responsive form zoekbalk.
+  Ik heb me tijdens de eerste twee weken wel gerealizeerd dat de website die ik heb gekozen moeilijker is dan ik van tevoren had verwacht. De lastigste onderdelen op dit moment waar ik ook nog niet uit ben gekomen zijn de footer en de responsive form zoekbalk.
   <img src="readme-images/voortgang1-c.png" width="600px" alt="screenshots van grootste uitdagingen">
 
 
@@ -258,19 +258,21 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/homepagina-resultaat.png" width="850px" alt="uitkomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+  De afgelopen weken heb ik het meeste geleerd over CSS en dan met name het responsive positioneren van elementen. Voorheen kende ik flex een beetje van vorig jaar, maar verder had ik geen idee hoe ik websites responsive moest maken. Het werken met grid, flex, position en media queries heeft me dan ook erg verrast omdat dit vrij snel goed ging en ik het minder moeilijk vond dan ik had verwacht. Airbnb maakt hier dan ook erg veel gebruik van, dus zeker in de latere weken met mijn tweede pagina ging dit allemaal voor mijn gevoel steeds makkelijker.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  <img src="readme-images/grid-flex.jpg" width="850px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  Ik heb voor mijn gevoel het meeste moeite gehad met het schrijven van de HTML. Heel vaak twijfelde ik of ik het juiste (semantisch correcte) element gebruikte en ik ben dan ook vaak veranderd omdat ik teveel twijfelde. Mijn initiële breakdownschets en uiteindelijke html verschillen dan ook van elkaar.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  Wat ik ook lastig vond in de eerste weken was mijn header en de micro-interactie met Javascript. Airbnb heeft een header die veel veranderd, waar steeds meer elementen aan worden toegevoegd naarmate het scherm breder wordt en met een scroll animatie. Ik ben er dan ook nog steeds niet helemaal tevreden over, vooral omdat de scroll animatie soms hapert. 
+
+  <img src="readme-images/header-resultaat.png" width="850px" alt="bummer">
 </details>
 
 
@@ -288,6 +290,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
     - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/picture
     - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/datalist
     - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/output
+    - https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions
   3. https://lottiefiles.com/blog/working-with-lottie-animations/how-to-add-lottie-animation-in-web-page-html
   4. https://maps.app.goo.gl/bmTcqM7kED8QMavU8
 

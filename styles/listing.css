@@ -84,7 +84,7 @@
     header > form {
         grid-row: 1;
         grid-column: 2 / 4;
-        width: 70%;
+        width: 55%;
         height: auto;
         align-self: center; 
         justify-self: center;
@@ -204,7 +204,7 @@ main section:nth-of-type(1) div output {
     justify-self: end;
     align-self: end;
     margin: 1em 1em 3em 1em;
-    background-color: var(--color-output-static);
+    background-color: var(--color-counter-static);
     color: var(--color-white-static);
     font-size: 0.8em;
     font-weight: 500;
@@ -285,10 +285,10 @@ main section:nth-of-type(2) > ul:nth-of-type(2) > li:nth-of-type(1) {
     grid-column: 1;
     display: flex;
     flex-direction: column;
-    gap: 0.15em;
+    gap: 0.1em;
     justify-self: center;
-    font-size: 1.2em;
-    font-weight: 400;
+    font-size: 1.15em;
+    font-weight: 500;
     text-align: center;
     color: var(--color-selected);
 }
@@ -883,6 +883,10 @@ main section:nth-of-type(4) button:nth-of-type(2):active, main section:nth-of-ty
     }
 
 /* Carrousel > Gallerij */
+
+    main section:nth-of-type(1) div ul::scroll-button(*) {
+        display: none;
+    }
 
     main section:nth-of-type(1) div ul {
         display: grid;
