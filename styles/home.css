@@ -241,7 +241,11 @@ main li button svg {
     stroke: var(--color-white-static);
     stroke-width: 2;
     overflow: visible;
-    transition: fill 0.2s ease;
+    transition: transform 0.2s ease, fill 0.2s ease;
+}
+
+main li button svg:hover {
+    transform: scale(1.1);
 }
 
 main li button svg:active {
